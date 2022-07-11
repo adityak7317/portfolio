@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <>
       <p>the portfolio is under progress </p>
+      <p>the portfolio is build using reactJS</p>
     </>
   );
 }
