@@ -14,6 +14,8 @@ import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 
+import "./Style.css";
+
 const style = {
   component: {
     // width: "99%",
@@ -24,8 +26,12 @@ const style = {
     // color: "blue",
     // fontSize: 40,
   },
+  navbarLi: {
+    cursor: "pointer",
+  },
 };
 
+// hover effect styling in react
 export default function App() {
   const homeRef = useRef();
   const aboutRef = useRef();
@@ -175,7 +181,7 @@ export default function App() {
 
       {/* navbar */}
       <div>
-        <div className="fixed-top row text-white bg-dark justify-content-between">
+        <div className="fixed-top row bg-dark justify-content-between">
           <div className="col-md-2 text-center">AK</div>
           <div className="col-md-7">
             <ul
@@ -184,18 +190,66 @@ export default function App() {
             >
               <li></li>
 
-              <li>Home</li>
-              <li>About</li>
-              <li>Experience</li>
-              <li>Skills</li>
-              <li>Projects</li>
-              <li>Contact</li>
-              <li></li>
+              <li
+                className="navbarLi "
+                style={style.navbarLi}
+                onClick={() => {
+                  scrollHandler(homeRef);
+                }}
+              >
+                Home
+              </li>
+              <li
+                className="navbarLi "
+                style={style.navbarLi}
+                onClick={() => {
+                  scrollHandler(aboutRef);
+                }}
+              >
+                About
+              </li>
+              <li
+                className="navbarLi "
+                style={style.navbarLi}
+                onClick={() => {
+                  scrollHandler(expRef);
+                }}
+              >
+                Experience
+              </li>
+              <li
+                className="navbarLi "
+                style={style.navbarLi}
+                onClick={() => {
+                  scrollHandler(skillsRef);
+                }}
+              >
+                Skills
+              </li>
+              <li
+                className="navbarLi "
+                style={style.navbarLi}
+                onClick={() => {
+                  scrollHandler(projectsRef);
+                }}
+              >
+                Projects
+              </li>
+              <li
+                className="navbarLi "
+                style={style.navbarLi}
+                onClick={() => {
+                  scrollHandler(contactRef);
+                }}
+              >
+                Contact
+              </li>
+              <li style={style.navbarLi}></li>
             </ul>
           </div>
         </div>
-
         {/* components */}
+        <div className="p-3"></div>
         <div style={style.component} ref={homeRef}>
           <Home />
         </div>
