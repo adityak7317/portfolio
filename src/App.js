@@ -10,24 +10,29 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Experience from "./Components/Experience/Experience";
 import Skills from "./Components/Skills/Skills";
-import Contact from "./Components/Contact/Contact";
 import Projects from "./Components/Projects/Projects";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
-const center = {
-  width: "100%",
-  height: "100vh",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "blue",
-  fontSize: 40,
+const style = {
+  component: {
+    // width: "99%",
+    minHeight: "100vh",
+    // display: "flex",
+    // alignItems: "center",
+    // justifyContent: "center",
+    // color: "blue",
+    // fontSize: 40,
+  },
 };
 
 export default function App() {
-  const section1 = useRef();
-  const section2 = useRef();
-  const section3 = useRef();
-  const section4 = useRef();
+  const homeRef = useRef();
+  const aboutRef = useRef();
+  const expRef = useRef();
+  const skillsRef = useRef();
+  const projectsRef = useRef();
+  const contactRef = useRef();
   const toTop = useRef();
 
   const scrollHandler = (elmRef) => {
@@ -56,7 +61,7 @@ export default function App() {
 
   return (
     <>
-      <header>
+      {/* <header>
         <ul
           style={{
             display: "flex",
@@ -66,6 +71,7 @@ export default function App() {
             cursor: "pointer",
             position: "fixed",
             backgroundColor: "pink",
+            bottom: "0",
           }}
         >
           <li
@@ -97,43 +103,124 @@ export default function App() {
             section4
           </li>
         </ul>
-      </header>
-
-      <Navbar expand="lg" className="bg-body-tertiary">
+      </header> */}
+      {/* <Navbar
+        expand="lg"
+        className="bg-body-tertiary"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+          justifyContent: "space-evenly",
+          // cursor: "pointer",
+          position: "fixed",
+          // backgroundColor: "pink",
+          // bottom: "0",
+        }}
+      >
         <Container fluid>
           <Navbar.Brand className="m-0">Logo</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
-          {/* <div> */}
           <Navbar.Collapse
             id="navbarScroll"
             // className="d-flex justify-content-end"
           >
             <Nav className="" style={{ maxHeight: "100px" }} navbarScroll>
-              <Nav.Link>Home</Nav.Link>
-              <Nav.Link>About</Nav.Link>
-              <Nav.Link>Experience</Nav.Link>
-              <Nav.Link>Skills</Nav.Link>
-              <Nav.Link>Projects</Nav.Link>
-              <Nav.Link>Contact</Nav.Link>
-              {/* <Nav.Link >Link</Nav.Link> */}
-              {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown> */}
-              {/* <Nav.Link disabled>Link</Nav.Link> */}
+              <Nav.Link
+                onClick={() => {
+                  scrollHandler(homeRef);
+                }}
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  scrollHandler(aboutRef);
+                }}
+              >
+                About
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  scrollHandler(expRef);
+                }}
+              >
+                Experience
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  scrollHandler(skillsRef);
+                }}
+              >
+                Skills
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  scrollHandler(projectsRef);
+                }}
+              >
+                Projects
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  scrollHandler(contactRef);
+                }}
+              >
+                Contact
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          {/* </div> */}
         </Container>
-      </Navbar>
+      </Navbar> */}
 
-      <div ref={section1} style={{ backgroundColor: "gray", ...center }}>
+      {/* navbar */}
+      <div>
+        <div className="fixed-top row text-white bg-dark justify-content-between">
+          <div className="col-md-2 text-center">AK</div>
+          <div className="col-md-7">
+            <ul
+              className="d-flex flex-row justify-content-between p-1 m-0"
+              style={{ listStyle: "none" }}
+            >
+              <li></li>
+
+              <li>Home</li>
+              <li>About</li>
+              <li>Experience</li>
+              <li>Skills</li>
+              <li>Projects</li>
+              <li>Contact</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* components */}
+        <div style={style.component} ref={homeRef}>
+          <Home />
+        </div>
+        <div style={style.component} ref={aboutRef}>
+          <About />
+        </div>
+        <div style={style.component} ref={expRef}>
+          <Experience />
+        </div>
+        <div style={style.component} ref={skillsRef}>
+          <Skills />
+        </div>
+        <div style={style.component} ref={projectsRef}>
+          <Projects />
+        </div>
+        <div style={style.component} ref={skillsRef}>
+          <Skills />
+        </div>
+        <div style={style.component} ref={contactRef}>
+          <Contact />
+        </div>
+        <div style={style.component}>
+          <Footer />
+        </div>
+        {/* <div ref={section1} style={{ backgroundColor: "gray", ...center }}>
         SECTION 1
       </div>
       <div ref={section2} style={{ backgroundColor: "green", ...center }}>
@@ -144,7 +231,9 @@ export default function App() {
       </div>
       <div ref={section4} style={{ backgroundColor: "darkgray", ...center }}>
         SECTION 4
+      </div> */}
       </div>
+      {/* back to top */}
       <div
         style={{
           position: "fixed",
