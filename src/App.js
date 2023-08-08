@@ -6,6 +6,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Experience from "./Components/Experience/Experience";
+import Skills from "./Components/Skills/Skills";
+import Contact from "./Components/Contact/Contact";
+import Projects from "./Components/Projects/Projects";
+
 const center = {
   width: "100%",
   height: "100vh",
@@ -101,12 +108,12 @@ export default function App() {
             id="navbarScroll"
             // className="d-flex justify-content-end"
           >
-            <Nav className="" navbarScroll>
+            <Nav className="" style={{ maxHeight: "100px" }} navbarScroll>
               <Nav.Link>Home</Nav.Link>
               <Nav.Link>About</Nav.Link>
               <Nav.Link>Experience</Nav.Link>
               <Nav.Link>Skills</Nav.Link>
-              <Nav.Link>Works</Nav.Link>
+              <Nav.Link>Projects</Nav.Link>
               <Nav.Link>Contact</Nav.Link>
               {/* <Nav.Link >Link</Nav.Link> */}
               {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
