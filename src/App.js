@@ -28,11 +28,25 @@ const style = {
   },
   navbarLi: {
     cursor: "pointer",
+    color: "white",
+    // padding: "3px",
+    // borderBottom: "0.5px solid red",
+  },
+  navbarLiHover: {
+    // color: "gray",
+    // transition: "width .5s ease, background-color .5s ease",
   },
 };
 
 // hover effect styling in react
 export default function App() {
+  const [homeHover, setHomeHover] = useState(false);
+  const [aboutHover, setAboutHover] = useState(false);
+  const [expHover, setExpHover] = useState(false);
+  const [skilsHover, setSkilsHover] = useState(false);
+  const [projectsHover, setProjectsHover] = useState(false);
+  const [contactHover, setContactHover] = useState(false);
+
   const homeRef = useRef();
   const aboutRef = useRef();
   const expRef = useRef();
@@ -67,179 +81,137 @@ export default function App() {
 
   return (
     <>
-      {/* <header>
-        <ul
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "100%",
-            justifyContent: "space-evenly",
-            cursor: "pointer",
-            position: "fixed",
-            backgroundColor: "pink",
-            bottom: "0",
-          }}
-        >
-          <li
-            onClick={() => {
-              scrollHandler(section1);
-            }}
-          >
-            section1
-          </li>
-          <li
-            onClick={() => {
-              scrollHandler(section2);
-            }}
-          >
-            section2
-          </li>
-          <li
-            onClick={() => {
-              scrollHandler(section3);
-            }}
-          >
-            section3
-          </li>
-          <li
-            onClick={() => {
-              scrollHandler(section4);
-            }}
-          >
-            section4
-          </li>
-        </ul>
-      </header> */}
-      {/* <Navbar
-        expand="lg"
-        className="bg-body-tertiary"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          width: "100%",
-          justifyContent: "space-evenly",
-          // cursor: "pointer",
-          position: "fixed",
-          // backgroundColor: "pink",
-          // bottom: "0",
-        }}
-      >
-        <Container fluid>
-          <Navbar.Brand className="m-0">Logo</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse
-            id="navbarScroll"
-            // className="d-flex justify-content-end"
-          >
-            <Nav className="" style={{ maxHeight: "100px" }} navbarScroll>
-              <Nav.Link
-                onClick={() => {
-                  scrollHandler(homeRef);
-                }}
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  scrollHandler(aboutRef);
-                }}
-              >
-                About
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  scrollHandler(expRef);
-                }}
-              >
-                Experience
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  scrollHandler(skillsRef);
-                }}
-              >
-                Skills
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  scrollHandler(projectsRef);
-                }}
-              >
-                Projects
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  scrollHandler(contactRef);
-                }}
-              >
-                Contact
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar> */}
-
       {/* navbar */}
       <div>
         <div className="fixed-top row bg-dark justify-content-between">
-          <div className="col-md-2 text-center">AK</div>
+          <div className="col-md-2 d-flex align-items-center text-white">
+            <span className="text-center" style={{ width: "100%" }}>
+              𝕒𝕜
+            </span>
+          </div>
           <div className="col-md-7">
             <ul
-              className="d-flex flex-row justify-content-between p-1 m-0"
-              style={{ listStyle: "none" }}
+              className="d-flex flex-row justify-content-between align-items-center p-1 m-0"
+              // style={{ listStyle: "none" }}
             >
               <li></li>
 
               <li
                 className="navbarLi "
-                style={style.navbarLi}
                 onClick={() => {
                   scrollHandler(homeRef);
+                }}
+                onMouseEnter={() => setHomeHover(true)}
+                onMouseLeave={() => setHomeHover(false)}
+                style={{
+                  ...style.navbarLi,
+                  ...(aboutHover ||
+                  expHover ||
+                  skilsHover ||
+                  projectsHover ||
+                  contactHover
+                    ? style.navbarLiHover
+                    : null),
                 }}
               >
                 Home
               </li>
               <li
                 className="navbarLi "
-                style={style.navbarLi}
                 onClick={() => {
                   scrollHandler(aboutRef);
+                }}
+                onMouseEnter={() => setAboutHover(true)}
+                onMouseLeave={() => setAboutHover(false)}
+                style={{
+                  ...style.navbarLi,
+                  ...(homeHover ||
+                  expHover ||
+                  skilsHover ||
+                  projectsHover ||
+                  contactHover
+                    ? style.navbarLiHover
+                    : null),
                 }}
               >
                 About
               </li>
               <li
                 className="navbarLi "
-                style={style.navbarLi}
                 onClick={() => {
                   scrollHandler(expRef);
+                }}
+                onMouseEnter={() => setExpHover(true)}
+                onMouseLeave={() => setExpHover(false)}
+                style={{
+                  ...style.navbarLi,
+                  ...(aboutHover ||
+                  homeHover ||
+                  skilsHover ||
+                  projectsHover ||
+                  contactHover
+                    ? style.navbarLiHover
+                    : null),
                 }}
               >
                 Experience
               </li>
               <li
                 className="navbarLi "
-                style={style.navbarLi}
                 onClick={() => {
                   scrollHandler(skillsRef);
+                }}
+                onMouseEnter={() => setSkilsHover(true)}
+                onMouseLeave={() => setSkilsHover(false)}
+                style={{
+                  ...style.navbarLi,
+                  ...(aboutHover ||
+                  homeHover ||
+                  expHover ||
+                  projectsHover ||
+                  contactHover
+                    ? style.navbarLiHover
+                    : null),
                 }}
               >
                 Skills
               </li>
               <li
                 className="navbarLi "
-                style={style.navbarLi}
                 onClick={() => {
                   scrollHandler(projectsRef);
+                }}
+                onMouseEnter={() => setProjectsHover(true)}
+                onMouseLeave={() => setProjectsHover(false)}
+                style={{
+                  ...style.navbarLi,
+                  ...(aboutHover ||
+                  homeHover ||
+                  expHover ||
+                  skilsHover ||
+                  contactHover
+                    ? style.navbarLiHover
+                    : null),
                 }}
               >
                 Projects
               </li>
               <li
                 className="navbarLi "
-                style={style.navbarLi}
                 onClick={() => {
                   scrollHandler(contactRef);
+                }}
+                onMouseEnter={() => setContactHover(true)}
+                onMouseLeave={() => setContactHover(false)}
+                style={{
+                  ...style.navbarLi,
+                  ...(aboutHover ||
+                  homeHover ||
+                  expHover ||
+                  skilsHover ||
+                  projectsHover
+                    ? style.navbarLiHover
+                    : null),
                 }}
               >
                 Contact
@@ -250,29 +222,31 @@ export default function App() {
         </div>
         {/* components */}
         <div className="p-3"></div>
-        <div style={style.component} ref={homeRef}>
-          <Home />
-        </div>
-        <div style={style.component} ref={aboutRef}>
-          <About />
-        </div>
-        <div style={style.component} ref={expRef}>
-          <Experience />
-        </div>
-        <div style={style.component} ref={skillsRef}>
-          <Skills />
-        </div>
-        <div style={style.component} ref={projectsRef}>
-          <Projects />
-        </div>
-        <div style={style.component} ref={skillsRef}>
-          <Skills />
-        </div>
-        <div style={style.component} ref={contactRef}>
-          <Contact />
-        </div>
-        <div style={style.component}>
-          <Footer />
+        <div className="components">
+          <div style={style.component} ref={homeRef}>
+            <Home />
+          </div>
+          <div style={style.component} ref={aboutRef}>
+            <About />
+          </div>
+          <div style={style.component} ref={expRef}>
+            <Experience />
+          </div>
+          <div style={style.component} ref={skillsRef}>
+            <Skills />
+          </div>
+          <div style={style.component} ref={projectsRef}>
+            <Projects />
+          </div>
+          <div style={style.component} ref={skillsRef}>
+            <Skills />
+          </div>
+          <div style={style.component} ref={contactRef}>
+            <Contact />
+          </div>
+          <div style={style.component}>
+            <Footer />
+          </div>
         </div>
         {/* <div ref={section1} style={{ backgroundColor: "gray", ...center }}>
         SECTION 1

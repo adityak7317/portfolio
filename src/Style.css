@@ -1,5 +1,8 @@
-.navbarLi {
+/* .navbarLi {
   color: gray;
+} */
+ul {
+  list-style: none;
 }
 .navbarLi:hover {
   color: red;
@@ -8,3 +11,17 @@
   color: yellow !important;
   font-size: larger;
 } */
+
+.navbarLi:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.25s ease, background-color 0.5s ease;
+}
+.navbarLi:hover:after {
+  width: 100%;
+  background: rgb(175, 175, 175);
+}
