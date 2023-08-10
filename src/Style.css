@@ -1,9 +1,10 @@
 /* .navbarLi {
   color: gray;
 } */
-ul {
+li {
   list-style: none;
 }
+
 .navbarLi:hover {
   color: red;
 }

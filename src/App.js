@@ -19,7 +19,7 @@ import "./Style.css";
 const style = {
   component: {
     // width: "99%",
-    minHeight: "100vh",
+    // minHeight: "100vh",
     // display: "flex",
     // alignItems: "center",
     // justifyContent: "center",
@@ -83,17 +83,30 @@ export default function App() {
     <>
       {/* navbar */}
       <div>
-        <div className="fixed-top row bg-dark justify-content-between">
-          <div className="col-md-2 d-flex align-items-center text-white">
+        <div
+          className=" row bg-dark text-white justify-content-between"
+          style={{ height: "8vh" }}
+        >
+          <div className="col-md-2 d-flex align-items-center">
             <span className="text-center" style={{ width: "100%" }}>
               𝕒𝕜
             </span>
           </div>
-          <div className="col-md-7">
-            <ul
-              className="d-flex flex-row justify-content-between align-items-center p-1 m-0"
-              // style={{ listStyle: "none" }}
-            >
+          {/* <div className="col-md-7 ">
+            <div className="d-flex justify-content-between align-items-center">
+              <span>Home</span>
+              <span>About</span>
+              <span>Experience</span>
+              <span>Skills</span>
+              <span>Projects</span>
+              <span>Contact</span>
+            </div>
+          </div> */}
+          <div className="col-md-7 d-flex flex-row justify-content-between align-items-center p-0 m-0">
+            <>
+              {/* // className="d-flex flex-row justify-content-between align-items-center p-1 m-0"
+              //  style={{ listStyle: "none" }} */}
+              <li></li>
               <li></li>
 
               <li
@@ -216,39 +229,80 @@ export default function App() {
               >
                 Contact
               </li>
-              <li style={style.navbarLi}></li>
-            </ul>
+              <li></li>
+              <li></li>
+            </>
           </div>
         </div>
         {/* components */}
-        <div className="p-3"></div>
+        {/* <div className="p-3"></div> */}
+
         <div className="components">
+          <div className="p-2 text-center">
+            <span className="">
+              while
+              {/* while(alive){
+              code();
+              eat();
+              sleep();
+              repeat();
+            } */}
+            </span>
+          </div>
           <div
-            className="p-6 bg-dark text-white"
-            style={style.component}
+            // className="bg-warning text-white"
+            style={{ ...style.component, backgroundColor: "#DDE6ED" }}
             ref={homeRef}
           >
             <Home />
           </div>
-          <div style={style.component} ref={aboutRef}>
+          <div
+            // className="bg-warning text-white"
+            style={{ ...style.component, backgroundColor: "#9DB2BF" }}
+            ref={aboutRef}
+          >
             <About />
           </div>
-          <div style={style.component} ref={expRef}>
+          <div
+            // className="bg-warning text-white"
+            style={{ ...style.component, backgroundColor: "#526D82" }}
+            ref={expRef}
+          >
             <Experience />
           </div>
-          <div style={style.component} ref={skillsRef}>
+          <div
+            // className="bg-warning text-white"
+            style={{ ...style.component, backgroundColor: "#27374D" }}
+            ref={skillsRef}
+          >
             <Skills />
           </div>
-          <div style={style.component} ref={projectsRef}>
+          <div
+            // className="bg-warning text-white"
+            style={{ ...style.component, backgroundColor: "#526D82" }}
+            ref={projectsRef}
+          >
             <Projects />
           </div>
-          <div style={style.component} ref={skillsRef}>
+          {/* <div
+            // className="bg-warning text-white"
+            style={{ ...style.component, backgroundColor: "#9DB2BF" }}
+            ref={homeRef}
+          >
             <Skills />
-          </div>
-          <div style={style.component} ref={contactRef}>
+          </div> */}
+          <div
+            // className="bg-warning text-white"
+            style={{ ...style.component, backgroundColor: "#9DB2BF" }}
+            ref={contactRef}
+          >
             <Contact />
           </div>
-          <div style={style.component}>
+          <div
+            className="bg-dark text-white"
+            style={{ ...style.component }}
+            ref={homeRef}
+          >
             <Footer />
           </div>
         </div>
