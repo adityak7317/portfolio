@@ -229,7 +229,7 @@ export default function App() {
         <div className="components">
           <div className="p-2 text-center">
             <span className="">
-              while
+              while alive,code, eat,sleep,repeat....qoute
               {/* while(alive){
               code();
               eat();
