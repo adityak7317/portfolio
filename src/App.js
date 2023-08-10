@@ -223,7 +223,11 @@ export default function App() {
         {/* components */}
         <div className="p-3"></div>
         <div className="components">
-          <div style={style.component} ref={homeRef}>
+          <div
+            className="p-6 bg-dark text-white"
+            style={style.component}
+            ref={homeRef}
+          >
             <Home />
           </div>
           <div style={style.component} ref={aboutRef}>
