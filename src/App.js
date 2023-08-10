@@ -19,7 +19,8 @@ import "./Style.css";
 const style = {
   component: {
     // width: "99%",
-    // minHeight: "100vh",
+    minHeight: "100vh",
+    // overflow: "scroll",
     // display: "flex",
     // alignItems: "center",
     // justifyContent: "center",
@@ -81,8 +82,8 @@ export default function App() {
 
   return (
     <>
-      {/* navbar */}
       <div>
+        {/* navbar */}
         <div
           className=" row bg-dark text-white justify-content-between"
           style={{ height: "8vh" }}
@@ -92,20 +93,9 @@ export default function App() {
               𝕒𝕜
             </span>
           </div>
-          {/* <div className="col-md-7 ">
-            <div className="d-flex justify-content-between align-items-center">
-              <span>Home</span>
-              <span>About</span>
-              <span>Experience</span>
-              <span>Skills</span>
-              <span>Projects</span>
-              <span>Contact</span>
-            </div>
-          </div> */}
+
           <div className="col-md-7 d-flex flex-row justify-content-between align-items-center p-0 m-0">
             <>
-              {/* // className="d-flex flex-row justify-content-between align-items-center p-1 m-0"
-              //  style={{ listStyle: "none" }} */}
               <li></li>
               <li></li>
 
@@ -235,12 +225,11 @@ export default function App() {
           </div>
         </div>
         {/* components */}
-        {/* <div className="p-3"></div> */}
 
         <div className="components">
           <div className="p-2 text-center">
             <span className="">
-              while
+              while alive,code, eat,sleep,repeat....qoute
               {/* while(alive){
               code();
               eat();
