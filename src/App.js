@@ -85,7 +85,7 @@ export default function App() {
       <div>
         <div
           className=" row bg-dark text-white justify-content-between"
-          style={{ height: "12vh" }}
+          style={{ height: "8vh" }}
         >
           <div className="col-md-2 d-flex align-items-center">
             <span className="text-center" style={{ width: "100%" }}>
@@ -106,6 +106,7 @@ export default function App() {
             <>
               {/* // className="d-flex flex-row justify-content-between align-items-center p-1 m-0"
               //  style={{ listStyle: "none" }} */}
+              <li></li>
               <li></li>
 
               <li
@@ -228,7 +229,8 @@ export default function App() {
               >
                 Contact
               </li>
-              <li style={style.navbarLi}></li>
+              <li></li>
+              <li></li>
             </>
           </div>
         </div>
