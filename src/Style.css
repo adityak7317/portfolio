@@ -27,6 +27,31 @@ li {
   background: rgb(175, 175, 175);
 }
 
+.images {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+.images img {
+  height: 100%;
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s left 1s;
+}
+
+.images:hover .pic2 {
+  bottom: 40px;
+}
+
+.images:hover .pic1 {
+  left: 45%;
+}
+
 /* scrollbar styling */
 
 /* width */
