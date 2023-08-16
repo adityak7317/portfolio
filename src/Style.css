@@ -26,31 +26,49 @@ li {
   width: 100%;
   background: rgb(175, 175, 175);
 }
+/* .try {
+  color: yellow;
+} */
 
 .images {
   width: 45%;
-  height: 80%;
-  position: absolute;
-  bottom: 0;
-  right: 100px;
-}
-.images img {
   height: 100%;
   position: absolute;
+  top: 0;
+  right: 99px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.images img {
+  /* padding: 15%; */
+  height: 45%;
+  position: absolute;
 
-  left: 50%;
-  bottom: 0;
+  /* right: 50%; */
+  left: 70%;
+  /* bottom: 0; */
+  /* top: 0%; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
   transform: translateX(-50%);
-  transition: bottom 1s left 1s;
+  /* transition: bottom 1s left 1s; */
 }
 
-.images:hover .pic2 {
+@media (max-width: 480px) {
+  /* .try {
+    color: red;
+  } */
+}
+
+/* .images:hover .pic2 {
   bottom: 40px;
 }
 
 .images:hover .pic1 {
   left: 45%;
-}
+} */
 
 /* scrollbar styling */
 
