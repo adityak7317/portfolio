@@ -116,3 +116,24 @@ li {
 /* ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
 } */
+
+.blinkingText {
+  font-family: "Times New Roman";
+  color: black;
+  text-align: center;
+  animation: animate 0.9s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

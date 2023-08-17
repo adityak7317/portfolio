@@ -8,21 +8,21 @@ import React from "react";
 // import darkgray from "../../static/new/darkgray.png";
 import mainPhoto from "../../static/mainPhoto.png";
 
+const style = {};
+
 export default function Home() {
   return (
     <>
       <div className="row">
-        <div className="col-md-6 p-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa numquam
-          possimus necessitatibus labore dignissimos rerum in explicabo
-          consequuntur a ab iure totam repudiandae, illum magnam fugit rem
-          delectus ipsam dolorem! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Accusantium repellendus inventore ut autem et
-          voluptas commodi corporis sunt libero. Aliquam maiores molestiae
-          ducimus ipsam odit quod amet ipsum quo velit? Lorem ipsum dolor, sit
-          amet consectetur adipisicing elit. Mollitia aut illum minus quam ex
-          molestias ea accusantium cumque? Ipsa, tempore non. Tenetur, ipsum
-          quia. Voluptatem deserunt at quia velit minima.
+        <div className="col-md-6 d-flex justify-content-center align-items-center ">
+          <div className="row" style={{ fontSize: "xx-large" }}>
+            <span>Hi There!👋</span>
+            <span>
+              My Name is <span style={{ color: "#ffb200" }}>Aditya Kumar</span>
+              <span className="blinkingText"> I</span>
+            </span>
+            <span>I'm a Software Engineer</span>
+          </div>
         </div>
         <div className="col-md-6 d-flex align-item-center justify-content-center">
           <img
