@@ -26,6 +26,70 @@ li {
   width: 100%;
   background: rgb(175, 175, 175);
 }
+.mainPhoto {
+  filter: drop-shadow(9px 6px 6px gray);
+  transition: transform 0.2s;
+}
+
+.mainPhoto:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(9px 6px 6px rgb(70, 70, 70));
+}
+/* 
+.mainImages {
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 99px;
+  display: flex;
+  align-items: center;
+}
+.bgImages {
+  width: 42%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.mainImages .img {
+  width: 47%;
+  height: 45%;
+  position: absolute;
+  left: 70%;
+  transform: translateX(-50%);
+}
+.img .mainPhoto {
+  width: 100%;
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  bottom: 35px;
+}
+
+
+.blackPhotoDiv,
+.darkgaryPhotoDiv,
+.lightgrayPhotoDiv {
+  position: absolute;
+}
+
+.blackPhotoDiv {
+  width: 25%;
+  right: -35px;
+  top: 220px;
+}
+@media (max-width: 480px) {
+
+} */
+
+/* .mainImages:hover .pic2 {
+  bottom: 40px;
+}
+
+.mainImages:hover .pic1 {
+  left: 45%;
+} */
 
 /* scrollbar styling */
 
@@ -52,3 +116,24 @@ li {
 /* ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
 } */
+
+.blinkingText {
+  font-family: "Times New Roman";
+  color: black;
+  text-align: center;
+  animation: animate 0.9s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
