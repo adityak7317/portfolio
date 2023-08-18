@@ -89,8 +89,11 @@ export default function App() {
           style={{ height: "8vh" }}
         >
           <div className="col-md-2 d-flex align-items-center">
-            <span className="text-center" style={{ width: "100%" }}>
-              𝕒𝕜
+            <span
+              className="text-center highlightText"
+              style={{ width: "100%" }}
+            >
+              &#x2774; 𝕒𝕜 &#x2775;
             </span>
           </div>
 
@@ -225,19 +228,15 @@ export default function App() {
           </div>
         </div>
         {/* components */}
-
+        <div
+          className="p-2 text-center bg-white"
+          style={{ position: "absolute", width: "100%" }}
+        >
+          <span className="">
+            Everything is simple, but for this you need to master.
+          </span>
+        </div>
         <div className="components">
-          <div className="p-2 text-center">
-            <span className="">
-              while alive,code, eat,sleep,repeat....qoute
-              {/* while(alive){
-              code();
-              eat();
-              sleep();
-              repeat();
-            } */}
-            </span>
-          </div>
           <div
             // className="bg-warning text-white"
             style={{ ...style.component, backgroundColor: "#DDE6ED" }}

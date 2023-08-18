@@ -14,26 +14,77 @@ export default function Home() {
   return (
     <>
       <div className="row">
-        <div className="col-md-6 d-flex justify-content-center align-items-center ">
-          <div className="row" style={{ fontSize: "xx-large" }}>
-            <span>Hi There!👋</span>
-            <span>
-              My Name is <span style={{ color: "#ffb200" }}>Aditya Kumar</span>
-              <span className="blinkingText"> I</span>
+        <div
+          className="col-md-6"
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "xx-large",
+            fontWeight: "bold",
+          }}
+        >
+          <div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <span>Hi There!</span>
+              <span>
+                I'm <span className="highlightText">Aditya Kumar 👋</span>
+              </span>
+            </div>
+            <span className="d-flex align-items-center">
+              <span style={{ fontSize: "initial" }}>Software Engineer</span>
+              <span className="blinkingText">&nbsp;&#x2758;</span>
             </span>
-            <span>I'm a Software Engineer</span>
           </div>
+          {/* </div> */}
         </div>
-        <div className="col-md-6 d-flex align-item-center justify-content-center">
+        {/* <div
+          className="col-md-6 d-flex align-item-center justify-content-center"
+          style={{ minHeight: "100vh" }}
+        >
+
           <img
             src={mainPhoto}
             alt="main photo"
             className="mainPhoto"
             style={{
               width: "63%",
+              minHeight: "fit-content",
               // filter: "drop-shadow(16px 16px 10px black)",
             }}
           />
+        </div> */}
+
+        <div
+          className="col-md-6"
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={mainPhoto}
+              alt="main photo"
+              className="mainPhoto"
+              style={{
+                width: "90%",
+                // minHeight: "fit-content",
+                // filter: "drop-shadow(16px 16px 10px black)",
+              }}
+            />
+          </div>
+          {/* </div> */}
         </div>
       </div>
     </>
