@@ -8,9 +8,32 @@ import React from "react";
 // import darkgray from "../../static/new/darkgray.png";
 import mainPhoto from "../../static/mainPhoto.png";
 
+import { BiLogoLinkedin } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+// import { FaBeer } from 'react-icons/fa';
+// import { FaBeer } from 'react-icons/fa';
+
+import aditya_resume from "../../assests/aditya_resume.pdf";
+import { ToastContainer, toast } from "react-toastify";
+// import {
+//   createBrowserRouter,
+//   RouterProvider,
+//   Route,
+//   Link,
+// } from "react-router-dom";
 const style = {};
 
 export default function Home() {
+  const handleResumeDownload = () => {
+    const link = document.createElement("a");
+    link.download = "aditya_kumar_resume";
+    link.href = aditya_resume;
+    link.click();
+    toast.success("Resume Download Started !");
+  };
+
   return (
     <>
       <div className="row">
@@ -36,6 +59,84 @@ export default function Home() {
               <span style={{ fontSize: "initial" }}>Software Engineer</span>
               <span className="blinkingText">&nbsp;&#x2758;</span>
             </span>
+            <div className="row">
+              <div className="col-md-7">
+                <div className="d-flex flex-col justify-content-between">
+                  {/* <Link to="https://github.com/adityak7317"> */}
+                  <a href="https://github.com/adityak7317">
+                    <button
+                      type="button"
+                      className="btn btn-outline-dark btn-sm fs-5 pt-0"
+                    >
+                      <BsGithub />
+                    </button>
+                  </a>
+                  {/* </Link> */}
+                  <a href="https://www.linkedin.com/in/adityak7317/">
+                    <button
+                      type="button"
+                      className="btn btn-outline-dark btn-sm fs-5 pt-0"
+                    >
+                      <BiLogoLinkedin />
+                    </button>
+                  </a>
+                  <a href="https://www.instagram.com/adityak7317/">
+                    <button
+                      type="button"
+                      className="btn btn-outline-dark btn-sm fs-5 pt-0"
+                    >
+                      <BsInstagram />
+                    </button>
+                  </a>
+                  <a href="https://twitter.com/adityak7317">
+                    <button
+                      type="button"
+                      className="btn btn-outline-dark btn-sm fs-5 pt-0"
+                    >
+                      <BsTwitter />
+                    </button>
+                  </a>
+                </div>
+              </div>
+              {/* <div className="col-md-4"></div> */}
+            </div>
+
+            {/* <div className="row">
+              <div className="col-md-7">
+                <div className="d-flex flex-col justify-content-between">
+                  <button
+                    type="button"
+                    className="btn btn-outline-dark"
+                    style={{ width: "100%" }}
+                  >
+                    Download Resume
+                  </button>
+                </div>
+              </div>
+              <div className="col-md-5">helo</div>
+            </div> */}
+
+            <div className="row">
+              <div className="col-md-7">
+                {/* <a
+                  href={aditya_resume}
+                  download="adityaResume"
+                  target="_blank"
+                  rel="noreferrer"
+                > */}
+                <button
+                  type="button"
+                  className="btn btn-outline-dark"
+                  style={{ width: "100%" }}
+                  onClick={handleResumeDownload}
+                >
+                  Download Resume
+                </button>
+                {/* </a> */}
+              </div>
+              {/* <div className="col-md-3">helo</div> */}
+            </div>
+            {/* <Link>test</Link> */}
           </div>
           {/* </div> */}
         </div>
