@@ -16,6 +16,9 @@ import Footer from "./Components/Footer/Footer";
 
 import "./Style.css";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const style = {
   component: {
     // width: "99%",
@@ -26,6 +29,7 @@ const style = {
     // justifyContent: "center",
     // color: "blue",
     // fontSize: 40,
+    border: "0.5px solid gray",
   },
   navbarLi: {
     cursor: "pointer",
@@ -82,6 +86,7 @@ export default function App() {
 
   return (
     <>
+      <ToastContainer />
       <div>
         {/* navbar */}
         <div
