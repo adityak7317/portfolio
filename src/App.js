@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import Button from "react-bootstrap/Button";
+// import Container from "react-bootstrap/Container";
+// import Form from "react-bootstrap/Form";
+// import Nav from "react-bootstrap/Nav";
+// import Navbar from "react-bootstrap/Navbar";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
@@ -18,6 +18,8 @@ import "./Style.css";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 const style = {
   component: {
@@ -43,7 +45,6 @@ const style = {
   },
 };
 
-// hover effect styling in react
 export default function App() {
   const [homeHover, setHomeHover] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
@@ -233,99 +234,82 @@ export default function App() {
           </div>
         </div>
         {/* components */}
-        <div
-          className="p-2 text-center bg-white"
-          style={{ position: "absolute", width: "100%" }}
-        >
-          <span className="">
-            Everything is simple, but for this you need to master.
-          </span>
-        </div>
-        <div className="components">
+        <div>
           <div
-            // className="bg-warning text-white"
-            style={{ ...style.component, backgroundColor: "#DDE6ED" }}
-            ref={homeRef}
+            className="p-2 text-center bg-white"
+            style={{ position: "absolute", width: "100%" }}
           >
-            <Home />
+            <span className="">
+              Everything is simple, but for this you need to master.
+            </span>
           </div>
-          <div
-            // className="bg-warning text-white"
-            style={{ ...style.component, backgroundColor: "#9DB2BF" }}
-            ref={aboutRef}
-          >
-            <About />
-          </div>
-          <div
-            // className="bg-warning text-white"
-            style={{ ...style.component, backgroundColor: "#526D82" }}
-            ref={expRef}
-          >
-            <Experience />
-          </div>
-          <div
-            // className="bg-warning text-white"
-            style={{ ...style.component, backgroundColor: "#27374D" }}
-            ref={skillsRef}
-          >
-            <Skills />
-          </div>
-          <div
-            // className="bg-warning text-white"
-            style={{ ...style.component, backgroundColor: "#526D82" }}
-            ref={projectsRef}
-          >
-            <Projects />
-          </div>
-          {/* <div
-            // className="bg-warning text-white"
-            style={{ ...style.component, backgroundColor: "#9DB2BF" }}
-            ref={homeRef}
-          >
-            <Skills />
-          </div> */}
-          <div
-            // className="bg-warning text-white"
-            style={{ ...style.component, backgroundColor: "#9DB2BF" }}
-            ref={contactRef}
-          >
-            <Contact />
-          </div>
-          <div
-            className="bg-dark text-white"
-            style={{ ...style.component }}
-            ref={homeRef}
-          >
-            <Footer />
+          <div className="components">
+            <div
+              style={{ ...style.component, backgroundColor: "#DDE6ED" }}
+              ref={homeRef}
+            >
+              <Home />
+            </div>
+            <div
+              style={{ ...style.component, backgroundColor: "#9DB2BF" }}
+              ref={aboutRef}
+            >
+              <About />
+            </div>
+            <div
+              style={{ ...style.component, backgroundColor: "#526D82" }}
+              ref={expRef}
+            >
+              <Experience />
+            </div>
+            <div
+              style={{ ...style.component, backgroundColor: "#27374D" }}
+              ref={skillsRef}
+            >
+              <Skills />
+            </div>
+            <div
+              style={{ ...style.component, backgroundColor: "#526D82" }}
+              ref={projectsRef}
+            >
+              <Projects />
+            </div>
+
+            <div
+              style={{ ...style.component, backgroundColor: "#9DB2BF" }}
+              ref={contactRef}
+            >
+              <Contact />
+            </div>
+            <div
+              className="bg-dark text-white"
+              style={{ ...style.component }}
+              ref={homeRef}
+            >
+              <Footer />
+            </div>
           </div>
         </div>
-        {/* <div ref={section1} style={{ backgroundColor: "gray", ...center }}>
-        SECTION 1
-      </div>
-      <div ref={section2} style={{ backgroundColor: "green", ...center }}>
-        SECTION 2
-      </div>
-      <div ref={section3} style={{ backgroundColor: "#333", ...center }}>
-        SECTION 3
-      </div>
-      <div ref={section4} style={{ backgroundColor: "darkgray", ...center }}>
-        SECTION 4
-      </div> */}
       </div>
       {/* back to top */}
       <div
         style={{
           position: "fixed",
-          right: 10,
-          bottom: 20,
-          backgroundColor: "red",
+          right: 30,
+          bottom: 30,
           cursor: "pointer",
         }}
         onClick={() => {
           scrollToTop(toTop);
         }}
       >
-        {show && <h1>Go to Top</h1>}
+        {show && (
+          <>
+            <button type="button" className="btn btn-warning btn-sm fs-5 pt-0">
+              <BsFillArrowUpCircleFill />
+            </button>
+          </>
+        )}
       </div>
     </>
   );
