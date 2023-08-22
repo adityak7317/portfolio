@@ -23,7 +23,6 @@ import { ToastContainer, toast } from "react-toastify";
 //   Route,
 //   Link,
 // } from "react-router-dom";
-const style = {};
 
 export default function Home() {
   const handleResumeDownload = () => {
@@ -40,7 +39,7 @@ export default function Home() {
         <div
           className="col-md-6"
           style={{
-            minHeight: "100vh",
+            minHeight: "50vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -62,7 +61,6 @@ export default function Home() {
             <div className="row">
               <div className="col-md-7">
                 <div className="d-flex flex-col justify-content-between">
-                  {/* <Link to="https://github.com/adityak7317"> */}
                   <a href="https://github.com/adityak7317">
                     <button
                       type="button"
@@ -71,7 +69,6 @@ export default function Home() {
                       <BsGithub />
                     </button>
                   </a>
-                  {/* </Link> */}
                   <a href="https://www.linkedin.com/in/adityak7317/">
                     <button
                       type="button"
@@ -98,32 +95,10 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              {/* <div className="col-md-4"></div> */}
             </div>
-
-            {/* <div className="row">
-              <div className="col-md-7">
-                <div className="d-flex flex-col justify-content-between">
-                  <button
-                    type="button"
-                    className="btn btn-outline-dark"
-                    style={{ width: "100%" }}
-                  >
-                    Download Resume
-                  </button>
-                </div>
-              </div>
-              <div className="col-md-5">helo</div>
-            </div> */}
 
             <div className="row">
               <div className="col-md-7">
-                {/* <a
-                  href={aditya_resume}
-                  download="adityaResume"
-                  target="_blank"
-                  rel="noreferrer"
-                > */}
                 <button
                   type="button"
                   className="btn btn-outline-dark"
@@ -132,35 +107,15 @@ export default function Home() {
                 >
                   Download Resume
                 </button>
-                {/* </a> */}
               </div>
-              {/* <div className="col-md-3">helo</div> */}
             </div>
-            {/* <Link>test</Link> */}
           </div>
-          {/* </div> */}
         </div>
-        {/* <div
-          className="col-md-6 d-flex align-item-center justify-content-center"
-          style={{ minHeight: "100vh" }}
-        >
-
-          <img
-            src={mainPhoto}
-            alt="main photo"
-            className="mainPhoto"
-            style={{
-              width: "63%",
-              minHeight: "fit-content",
-              // filter: "drop-shadow(16px 16px 10px black)",
-            }}
-          />
-        </div> */}
 
         <div
           className="col-md-6"
           style={{
-            minHeight: "100vh",
+            minHeight: "50vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -185,7 +140,6 @@ export default function Home() {
               }}
             />
           </div>
-          {/* </div> */}
         </div>
       </div>
     </>
