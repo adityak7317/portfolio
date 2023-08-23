@@ -12,7 +12,7 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
-// import { FaBeer } from 'react-icons/fa';
+import { HiOutlineMail } from "react-icons/hi";
 // import { FaBeer } from 'react-icons/fa';
 
 import aditya_resume from "../../assests/aditya_resume.pdf";
@@ -35,11 +35,12 @@ export default function Home() {
 
   return (
     <>
+      {/* <div className="p-2"></div> */}
       <div className="row">
         <div
           className="col-md-6"
           style={{
-            minHeight: "50vh",
+            minHeight: "45vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -59,8 +60,17 @@ export default function Home() {
               <span className="blinkingText">&nbsp;&#x2758;</span>
             </span>
             <div className="row">
-              <div className="col-md-7">
+              <div className="col-md-8">
                 <div className="d-flex flex-col justify-content-between">
+                  <a href="mailto: who.adityak@gmail.com">
+                    <button
+                      type="button"
+                      className="btn btn-outline-dark btn-sm fs-5 pt-0"
+                    >
+                      <HiOutlineMail />
+                    </button>
+                  </a>
+
                   <a href="https://github.com/adityak7317">
                     <button
                       type="button"
@@ -115,7 +125,7 @@ export default function Home() {
         <div
           className="col-md-6"
           style={{
-            minHeight: "50vh",
+            minHeight: "45vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
