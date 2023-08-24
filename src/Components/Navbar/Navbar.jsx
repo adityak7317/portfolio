@@ -1,4 +1,6 @@
-import React from "react";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 export default function Navbar() {
   return (
@@ -15,22 +17,49 @@ export default function Navbar() {
         <div className="row justify-content-between">
           <div className="col-md-1">
             <div className="d-flex align-items-center justify-content-center">
-              <span
-                className="text-center highlightText"
-                style={{ width: "100%" }}
-              >
-                &#x2774; 𝕒𝕜 &#x2775;
-              </span>
+              <Button size="small">
+                <span
+                  className="text-center highlightText"
+                  style={{ width: "100%" }}
+                >
+                  &#x2774; 𝕒𝕜 &#x2775;
+                </span>
+              </Button>
             </div>
           </div>
           <div className="col-md-6">
-            <ul className="m-0 p-0 col d-flex justify-content-around">
-              <li>Home</li>
-              <li>About</li>
-              <li>Experience</li>
-              <li>Projects</li>
-              <li>Contact</li>
-            </ul>
+            <div className="m-0 p-0 col d-flex justify-content-around">
+              <li>
+                {" "}
+                <Button size="small" className="text-white">
+                  Home
+                </Button>
+              </li>
+              <li>
+                {" "}
+                <Button size="small" className="text-white">
+                  About
+                </Button>
+              </li>
+              <li>
+                {" "}
+                <Button size="small" className="text-white">
+                  Experience
+                </Button>
+              </li>
+              <li>
+                {" "}
+                <Button size="small" className="text-white">
+                  Projects
+                </Button>
+              </li>
+              <li>
+                {" "}
+                <Button size="small" className="text-white">
+                  Contact
+                </Button>
+              </li>
+            </div>
           </div>
         </div>
       </div>
