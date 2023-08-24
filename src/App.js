@@ -1,57 +1,38 @@
-import React, { useRef, useState, useEffect } from "react";
-// import Button from "react-bootstrap/Button";
-// import Container from "react-bootstrap/Container";
-// import Form from "react-bootstrap/Form";
-// import Nav from "react-bootstrap/Nav";
-// import Navbar from "react-bootstrap/Navbar";
-// import NavDropdown from "react-bootstrap/NavDropdown";
+import React, { useState, useEffect, useRef } from "react";
+import "./App.css";
 
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
-import Experience from "./Components/Experience/Experience";
-import Skills from "./Components/Skills/Skills";
-import Projects from "./Components/Projects/Projects";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
-
-import "./Style.css";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
-const style = {
-  component: {
-    // width: "99%",
-    minHeight: "100vh",
-    // overflow: "scroll",
-    // display: "flex",
-    // alignItems: "center",
-    // justifyContent: "center",
-    // color: "blue",
-    // fontSize: 40,
-    border: "0.5px solid gray",
-  },
-  navbarLi: {
-    cursor: "pointer",
-    color: "white",
-    // padding: "3px",
-    // borderBottom: "0.5px solid red",
-  },
-  navbarLiHover: {
-    // color: "gray",
-    // transition: "width .5s ease, background-color .5s ease",
-  },
-};
-
 export default function App() {
-  const [homeHover, setHomeHover] = useState(false);
-  const [aboutHover, setAboutHover] = useState(false);
-  const [expHover, setExpHover] = useState(false);
-  const [skilsHover, setSkilsHover] = useState(false);
-  const [projectsHover, setProjectsHover] = useState(false);
-  const [contactHover, setContactHover] = useState(false);
+  const style = {
+    components: {
+      padding: "3%",
+      backgroundColor: "#DDE6ED",
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  };
+
+  // const [homeHover, setHomeHover] = useState(false);
+  // const [aboutHover, setAboutHover] = useState(false);
+  // const [expHover, setExpHover] = useState(false);
+  // const [skilsHover, setSkilsHover] = useState(false);
+  // const [projectsHover, setProjectsHover] = useState(false);
+  // const [contactHover, setContactHover] = useState(false);
 
   const homeRef = useRef();
   const aboutRef = useRef();
@@ -63,7 +44,10 @@ export default function App() {
 
   const scrollHandler = (elmRef) => {
     console.log(elmRef);
-    window.scrollTo({ top: elmRef.current.offsetTop, behavior: "smooth" });
+    window.scrollTo({
+      top: elmRef.current.offsetTop - 60,
+      behavior: "smooth",
+    });
   };
   const scrollToTop = (elmRef) => {
     console.log(elmRef);
@@ -88,228 +72,86 @@ export default function App() {
   return (
     <>
       <ToastContainer />
-      <div>
-        {/* navbar */}
-        <div
-          className=" row bg-dark text-white justify-content-between"
-          style={{ height: "8vh" }}
-        >
-          <div className="col-md-2 d-flex align-items-center">
-            <span
-              className="text-center highlightText"
-              style={{ width: "100%" }}
-            >
-              &#x2774; 𝕒𝕜 &#x2775;
-            </span>
-          </div>
 
-          <div className="col-md-7 d-flex flex-row justify-content-between align-items-center p-0 m-0">
-            <>
-              <li></li>
-              <li></li>
+      <Navbar
+        scrollHandler={scrollHandler}
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        expRef={expRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
 
-              <li
-                className="navbarLi "
-                onClick={() => {
-                  scrollHandler(homeRef);
-                }}
-                onMouseEnter={() => setHomeHover(true)}
-                onMouseLeave={() => setHomeHover(false)}
-                style={{
-                  ...style.navbarLi,
-                  ...(aboutHover ||
-                  expHover ||
-                  skilsHover ||
-                  projectsHover ||
-                  contactHover
-                    ? style.navbarLiHover
-                    : null),
-                }}
-              >
-                Home
-              </li>
-              <li
-                className="navbarLi "
-                onClick={() => {
-                  scrollHandler(aboutRef);
-                }}
-                onMouseEnter={() => setAboutHover(true)}
-                onMouseLeave={() => setAboutHover(false)}
-                style={{
-                  ...style.navbarLi,
-                  ...(homeHover ||
-                  expHover ||
-                  skilsHover ||
-                  projectsHover ||
-                  contactHover
-                    ? style.navbarLiHover
-                    : null),
-                }}
-              >
-                About
-              </li>
-              <li
-                className="navbarLi "
-                onClick={() => {
-                  scrollHandler(expRef);
-                }}
-                onMouseEnter={() => setExpHover(true)}
-                onMouseLeave={() => setExpHover(false)}
-                style={{
-                  ...style.navbarLi,
-                  ...(aboutHover ||
-                  homeHover ||
-                  skilsHover ||
-                  projectsHover ||
-                  contactHover
-                    ? style.navbarLiHover
-                    : null),
-                }}
-              >
-                Experience
-              </li>
-              <li
-                className="navbarLi "
-                onClick={() => {
-                  scrollHandler(skillsRef);
-                }}
-                onMouseEnter={() => setSkilsHover(true)}
-                onMouseLeave={() => setSkilsHover(false)}
-                style={{
-                  ...style.navbarLi,
-                  ...(aboutHover ||
-                  homeHover ||
-                  expHover ||
-                  projectsHover ||
-                  contactHover
-                    ? style.navbarLiHover
-                    : null),
-                }}
-              >
-                Skills
-              </li>
-              <li
-                className="navbarLi "
-                onClick={() => {
-                  scrollHandler(projectsRef);
-                }}
-                onMouseEnter={() => setProjectsHover(true)}
-                onMouseLeave={() => setProjectsHover(false)}
-                style={{
-                  ...style.navbarLi,
-                  ...(aboutHover ||
-                  homeHover ||
-                  expHover ||
-                  skilsHover ||
-                  contactHover
-                    ? style.navbarLiHover
-                    : null),
-                }}
-              >
-                Projects
-              </li>
-              <li
-                className="navbarLi "
-                onClick={() => {
-                  scrollHandler(contactRef);
-                }}
-                onMouseEnter={() => setContactHover(true)}
-                onMouseLeave={() => setContactHover(false)}
-                style={{
-                  ...style.navbarLi,
-                  ...(aboutHover ||
-                  homeHover ||
-                  expHover ||
-                  skilsHover ||
-                  projectsHover
-                    ? style.navbarLiHover
-                    : null),
-                }}
-              >
-                Contact
-              </li>
-              <li></li>
-              <li></li>
-            </>
-          </div>
-        </div>
-        {/* components */}
-        <div>
+      <div className="components">
+        {/* <div> */}
+        <div className="SpaceBWNavAndCom"></div>
+        {/* </div> */}
+        <div ref={homeRef}>
           <div
-            className="p-2 text-center bg-white"
-            style={{ position: "absolute", width: "100%" }}
+            className="d-flex flex-column justify-content-center align-items-center"
+            // style={{}}
           >
-            <span className="">
-              Everything is simple, but for this you need to master.
+            <span className="p-1"></span>
+            <span>
+              Everything is simple, but for this you need to master!!!
             </span>
+            <span className="p-1"></span>
           </div>
-          <div className="components">
-            <div
-              style={{ ...style.component, backgroundColor: "#DDE6ED" }}
-              ref={homeRef}
-            >
-              <Home />
-            </div>
-            <div
-              style={{ ...style.component, backgroundColor: "#9DB2BF" }}
-              ref={aboutRef}
-            >
-              <About />
-            </div>
-            <div
-              style={{ ...style.component, backgroundColor: "#526D82" }}
-              ref={expRef}
-            >
-              <Experience />
-            </div>
-            <div
-              style={{ ...style.component, backgroundColor: "#27374D" }}
-              ref={skillsRef}
-            >
-              <Skills />
-            </div>
-            <div
-              style={{ ...style.component, backgroundColor: "#526D82" }}
-              ref={projectsRef}
-            >
-              <Projects />
-            </div>
 
-            <div
-              style={{ ...style.component, backgroundColor: "#9DB2BF" }}
-              ref={contactRef}
-            >
-              <Contact />
-            </div>
-            <div
-              className="bg-dark text-white"
-              style={{ ...style.component }}
-              ref={homeRef}
-            >
-              <Footer />
-            </div>
+          <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
+            <Home />
           </div>
         </div>
-      </div>
-      {/* back to top */}
-      <div
-        style={{
-          position: "fixed",
-          right: 30,
-          bottom: 30,
-          cursor: "pointer",
-        }}
-        onClick={() => {
-          scrollToTop(toTop);
-        }}
-      >
-        {show && (
-          <>
-            <button type="button" className="btn btn-warning btn-sm fs-5 pt-0">
-              <BsFillArrowUpCircleFill />
-            </button>
-          </>
-        )}
+        <div
+          style={{ ...style.components, backgroundColor: "#526D82" }}
+          ref={aboutRef}
+        >
+          <About />
+        </div>
+        <div
+          style={{ ...style.components, backgroundColor: "#27374D" }}
+          ref={expRef}
+        >
+          <Experience />
+        </div>
+        <div
+          style={{ ...style.components, backgroundColor: "#526D82" }}
+          ref={projectsRef}
+        >
+          <Projects />
+        </div>
+        <div
+          style={{ ...style.components, backgroundColor: "#9DB2BF" }}
+          ref={contactRef}
+        >
+          <Contact />
+        </div>
+        <div className="bg-dark text-white" style={{ ...style.components }}>
+          <Footer />
+        </div>
+        {/* back to top */}
+        <div
+          style={{
+            position: "fixed",
+            right: 30,
+            bottom: 30,
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            scrollToTop(toTop);
+          }}
+        >
+          {show && (
+            <>
+              <button
+                type="button"
+                className="btn btn-warning btn-sm fs-5 pt-0"
+              >
+                <BsFillArrowUpCircleFill />
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </>
   );
