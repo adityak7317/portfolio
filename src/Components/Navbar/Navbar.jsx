@@ -9,6 +9,7 @@ export default function Navbar(props) {
         className="p-3 bg-dark text-white position-fixed"
         style={{
           width: "100%",
+          zIndex: 1,
           // minHeight: "7vh",
           // display: "flex",
           // alignItems: "center",

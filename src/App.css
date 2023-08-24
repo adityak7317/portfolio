@@ -35,9 +35,12 @@
 /* Home................... */
 
 .highlightText {
-  color: #ffb200;
+  color: rgb(222 129 0);
 }
 
+/* .homeBTN:hover {
+  color: background-color;
+} */
 li {
   list-style: none;
 }

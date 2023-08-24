@@ -17,6 +17,7 @@ import { BsFillArrowUpCircleFill } from "react-icons/bs";
 export default function App() {
   const style = {
     components: {
+      padding: "3%",
       backgroundColor: "#DDE6ED",
       width: "100%",
       display: "flex",
@@ -26,12 +27,12 @@ export default function App() {
     },
   };
 
-  const [homeHover, setHomeHover] = useState(false);
-  const [aboutHover, setAboutHover] = useState(false);
-  const [expHover, setExpHover] = useState(false);
-  const [skilsHover, setSkilsHover] = useState(false);
-  const [projectsHover, setProjectsHover] = useState(false);
-  const [contactHover, setContactHover] = useState(false);
+  // const [homeHover, setHomeHover] = useState(false);
+  // const [aboutHover, setAboutHover] = useState(false);
+  // const [expHover, setExpHover] = useState(false);
+  // const [skilsHover, setSkilsHover] = useState(false);
+  // const [projectsHover, setProjectsHover] = useState(false);
+  // const [contactHover, setContactHover] = useState(false);
 
   const homeRef = useRef();
   const aboutRef = useRef();
@@ -81,15 +82,25 @@ export default function App() {
         contactRef={contactRef}
       />
 
-      <div className="components" style={{ ...style.components }}>
+      <div className="components">
         {/* <div> */}
         <div className="SpaceBWNavAndCom"></div>
         {/* </div> */}
-        <div
-          style={{ ...style.components, backgroundColor: "#9DB2BF" }}
-          ref={homeRef}
-        >
-          <Home />
+        <div ref={homeRef}>
+          <div
+            className="d-flex flex-column justify-content-center align-items-center"
+            // style={{}}
+          >
+            <span className="p-1"></span>
+            <span>
+              Everything is simple, but for this you need to master!!!
+            </span>
+            <span className="p-1"></span>
+          </div>
+
+          <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
+            <Home />
+          </div>
         </div>
         <div
           style={{ ...style.components, backgroundColor: "#526D82" }}
