@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <>
       <div
@@ -31,31 +31,61 @@ export default function Navbar() {
             <div className="m-0 p-0 col d-flex justify-content-around">
               <li>
                 {" "}
-                <Button size="small" className="text-white">
+                <Button
+                  size="small"
+                  className="text-white"
+                  onClick={() => {
+                    props.scrollHandler(props.homeRef);
+                  }}
+                >
                   Home
                 </Button>
               </li>
               <li>
                 {" "}
-                <Button size="small" className="text-white">
+                <Button
+                  size="small"
+                  className="text-white"
+                  onClick={() => {
+                    props.scrollHandler(props.aboutRef);
+                  }}
+                >
                   About
                 </Button>
               </li>
               <li>
                 {" "}
-                <Button size="small" className="text-white">
+                <Button
+                  size="small"
+                  className="text-white"
+                  onClick={() => {
+                    props.scrollHandler(props.expRef);
+                  }}
+                >
                   Experience
                 </Button>
               </li>
               <li>
                 {" "}
-                <Button size="small" className="text-white">
+                <Button
+                  size="small"
+                  className="text-white"
+                  onClick={() => {
+                    props.scrollHandler(props.projectsRef);
+                  }}
+                >
                   Projects
                 </Button>
               </li>
               <li>
                 {" "}
-                <Button size="small" className="text-white">
+                <Button
+                  size="small"
+                  className="text-white"
+                  onClick={() => {
+                    props.scrollHandler(props.contactRef);
+                  }}
+                >
                   Contact
                 </Button>
               </li>

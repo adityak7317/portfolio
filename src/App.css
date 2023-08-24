@@ -1,15 +1,18 @@
 /* App.js.................... */
+/* .SpaceBWNavAndCom {
+  padding: 2.5%;
+} */
 
 /* extra wide */
 @media only screen and (max-width: 2080px) {
   .SpaceBWNavAndCom {
-    padding: 2.7%;
+    padding: 2.3%;
   }
 }
 /* desktop */
 @media only screen and (max-width: 1080px) {
   .SpaceBWNavAndCom {
-    padding: 3.5%;
+    padding: 3%;
   }
 }
 
@@ -19,13 +22,13 @@
 /* tab */
 @media only screen and (max-width: 720px) {
   .SpaceBWNavAndCom {
-    padding: 6%;
+    padding: 6.5%;
   }
 }
 /* smartphone */
 @media only screen and (max-width: 480px) {
   .SpaceBWNavAndCom {
-    padding: 11%;
+    padding: 10.7%;
   }
 }
 

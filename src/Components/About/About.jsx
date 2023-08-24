@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div>
+    <>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
         tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
@@ -153,6 +153,6 @@ export default function About() {
         atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
         magnam minima iste ad aliquid omnis nostrum eveniet quasi!
       </div>
-    </div>
+    </>
   );
 }
