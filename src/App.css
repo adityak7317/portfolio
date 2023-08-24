@@ -1,4 +1,7 @@
 /* App.js.................... */
+/* .SpaceBWNavAndCom {
+  padding: 2.5%;
+} */
 
 /* extra wide */
 @media only screen and (max-width: 2080px) {
@@ -9,7 +12,7 @@
 /* desktop */
 @media only screen and (max-width: 1080px) {
   .SpaceBWNavAndCom {
-    padding: 3.5%;
+    padding: 3%;
   }
 }
 
@@ -19,22 +22,25 @@
 /* tab */
 @media only screen and (max-width: 720px) {
   .SpaceBWNavAndCom {
-    padding: 6%;
+    padding: 6.5%;
   }
 }
 /* smartphone */
 @media only screen and (max-width: 480px) {
   .SpaceBWNavAndCom {
-    padding: 10%;
+    padding: 10.7%;
   }
 }
 
 /* Home................... */
 
 .highlightText {
-  color: #ffb200;
+  color: rgb(222 129 0);
 }
 
+/* .homeBTN:hover {
+  color: background-color;
+} */
 li {
   list-style: none;
 }
