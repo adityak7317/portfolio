@@ -1,8 +1,91 @@
 import React from "react";
 
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
+
+import { FaBookReader } from "react-icons/fa";
+import { MdOutlinePublishedWithChanges } from "react-icons/md";
+import { TiGroup } from "react-icons/ti";
+import { BiSolidTimer } from "react-icons/bi";
+// import { BsTwitter } from "react-icons/bs";
+
+// <Stack direction="row" spacing={1}>
+//       <Chip label="Chip Filled" />
+//       <Chip label="Chip Outlined" variant="outlined" />
+//     </Stack>
+
+const style = {
+  headerIcons: {
+    padding: "0%",
+    width: "150px",
+    aspectRatio: "2/1",
+    fontSize: "xx-large",
+    // color: "white",
+    // backgroundColor: "rgb(120 131 139)",
+    borderRadius: "25px",
+  },
+};
+
+const softSkills = [
+  {
+    no: 1,
+    imgSrc: "https://loremflickr.com/2160/2160",
+    headerSS: "Problem Solving",
+    aboutSS:
+      "I adeptly tackle intricate problems, especially as a software engineer, by innovatively resolving tough issues with practical solutions.",
+  },
+  {
+    no: 2,
+    imgSrc: "https://loremflickr.com/2160/2160",
+    headerSS: "Adaptibility",
+    aboutSS:
+      "I skillfully adapt to change, technology and demands, learn fast and grow in a variety of scenarios to excel and assist in project success.",
+  },
+  {
+    no: 3,
+    imgSrc: "https://loremflickr.com/2160/2160",
+    headerSS: "Team Player",
+    aboutSS:
+      "I like teaming up with others, believing in sharing ideas, cooperating, and contributing skills to reach our goals together.",
+  },
+
+  {
+    no: 4,
+    imgSrc: "https://loremflickr.com/2160/2160",
+    headerSS: "Time Management",
+    aboutSS:
+      "I excel at efficiently managing my time as a full-stack developer, ensuring tasks are completed both effectively and on schedule.",
+  },
+];
+
 export default function About() {
   return (
     <>
+      <div className="row">
+        {softSkills.map((val, key) => (
+          <>
+            <div className="col-md-3">
+              <div class="card mb-3">
+                <div class="p-1">
+                  {/* <div>
+                    <span>somethings</span>
+                  </div> */}
+                  <div>
+                    <div class="card-body p-0">
+                      <h6 class="card-title m-0 p-0 text-center">
+                        {val.headerSS}
+                      </h6>
+                      <span class="card-text">{val.aboutSS}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        ))}
+      </div>
+
       <div className="row" style={{ margin: "auto" }}>
         <div
           className="col-md-6"
@@ -198,7 +281,7 @@ export default function About() {
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
-                </div>{" "}
+                </div>
               </span>
             </div>
           </div> */}
@@ -221,7 +304,7 @@ export default function About() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
-              </div>{" "}
+              </div>
               <div class="progress mb-2 p-0">
                 <div
                   class="progress-bar w-75"
@@ -230,7 +313,7 @@ export default function About() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
-              </div>{" "}
+              </div>
               <div class="progress mb-2 p-0">
                 <div
                   class="progress-bar w-75"
@@ -239,7 +322,7 @@ export default function About() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
-              </div>{" "}
+              </div>
               <div class="progress mb-2 p-0">
                 <div
                   class="progress-bar w-75"
@@ -248,7 +331,7 @@ export default function About() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
-              </div>{" "}
+              </div>
               <div class="progress mb-2 p-0">
                 <div
                   class="progress-bar w-75"
@@ -284,3 +367,30 @@ export default function About() {
     </>
   );
 }
+
+// <div className="row">
+// <div className="col-md-3">
+//   <div className="card">
+//     <div className="card-body">
+//       <button
+//         type="button"
+//         className="btn btn-outline-dark d-flex justify-content-center align-items-center"
+//         style={style.headerIcons}
+//       >
+//         <FaBookReader />
+//       </button>
+//       <h6 className="d-flex justify-content-center m-0 p-0">
+//         Problem Solving
+//       </h6>
+//       <span>
+//         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+//         Temporibus illo sequi placeat excepturi quam porro in nesciunt
+//         nam animi impedit dolorum neque quibusdam libero reiciendis
+//         architecto, similique tempore necessitatibus officiis.
+//       </span>
+//     </div>
+//   </div>
+// </div>
+// </div>
+
+// <div className="p-1"></div>
