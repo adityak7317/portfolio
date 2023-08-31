@@ -31,7 +31,6 @@ export default function Navbar(props) {
           <div className="col-md-6">
             <div className="m-0 p-0 col d-flex justify-content-around">
               <li>
-                {" "}
                 <Button
                   size="small"
                   className="text-white"
@@ -43,7 +42,6 @@ export default function Navbar(props) {
                 </Button>
               </li>
               <li>
-                {" "}
                 <Button
                   size="small"
                   className="text-white"
@@ -55,7 +53,6 @@ export default function Navbar(props) {
                 </Button>
               </li>
               <li>
-                {" "}
                 <Button
                   size="small"
                   className="text-white"
@@ -67,7 +64,6 @@ export default function Navbar(props) {
                 </Button>
               </li>
               <li>
-                {" "}
                 <Button
                   size="small"
                   className="text-white"
@@ -79,7 +75,6 @@ export default function Navbar(props) {
                 </Button>
               </li>
               <li>
-                {" "}
                 <Button
                   size="small"
                   className="text-white"

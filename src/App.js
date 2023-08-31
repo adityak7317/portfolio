@@ -13,10 +13,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import HomeNew from "./components/HomeNew/HomeNew";
+import SideLinks from "./components/SideLinks/SideLinks";
 
 export default function App() {
   const style = {
     components: {
+      minHeight: "100vh",
       padding: "3%",
       backgroundColor: "#DDE6ED",
       width: "100%",
@@ -87,7 +90,7 @@ export default function App() {
         <div className="SpaceBWNavAndCom"></div>
         {/* </div> */}
         <div ref={homeRef}>
-          <div
+          {/* <div
             className="d-flex flex-column justify-content-center align-items-center"
             // style={{}}
           >
@@ -96,9 +99,11 @@ export default function App() {
               Everything is simple, but for this you need to master!!!
             </span>
             <span className="p-1"></span>
-          </div>
+          </div> */}
 
           <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
+            {/* <HomeNew /> */}
+
             <Home />
           </div>
         </div>
@@ -152,6 +157,18 @@ export default function App() {
             </>
           )}
         </div>
+      </div>
+
+      <div
+        className="sideContactList BTNStyling"
+        // style={{
+        //   position: "absolute",
+        //   top: "30%",
+        //   left: "0%",
+        //   width: "min-content",
+        // }}
+      >
+        <SideLinks />
       </div>
     </>
   );

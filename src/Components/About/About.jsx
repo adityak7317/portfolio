@@ -62,15 +62,12 @@ const softSkills = [
 export default function About() {
   return (
     <>
-      <div className="row">
+      {/* <div className="row">
         {softSkills.map((val, key) => (
           <>
             <div className="col-md-3">
               <div class="card mb-3">
                 <div class="p-1">
-                  {/* <div>
-                    <span>somethings</span>
-                  </div> */}
                   <div>
                     <div class="card-body p-0">
                       <h6 class="card-title m-0 p-0 text-center">
@@ -84,7 +81,7 @@ export default function About() {
             </div>
           </>
         ))}
-      </div>
+      </div> */}
 
       <div className="row" style={{ margin: "auto" }}>
         <div

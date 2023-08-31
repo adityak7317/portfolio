@@ -7,10 +7,45 @@ import { BsGithub } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
+import { BsWhatsapp } from "react-icons/bs";
 // import { FaBeer } from 'react-icons/fa';
 
 import aditya_resume from "../../asset/aditya_resume.pdf";
 import { ToastContainer, toast } from "react-toastify";
+
+const contactLinks = [
+  {
+    name: "Mail",
+    logo: <HiOutlineMail />,
+    link: "mailto: who.adityak@gmail.com",
+  },
+  {
+    name: "Linkedin",
+    logo: <BiLogoLinkedin />,
+    link: "https://www.linkedin.com/in/adityak7317/",
+  },
+  {
+    name: "Github",
+    logo: <BsGithub />,
+    link: "https://github.com/adityak7317",
+  },
+  {
+    name: "Whatsapp",
+    logo: <BsWhatsapp />,
+    link: "https://twitter.com/adityak7317",
+  },
+  {
+    name: "Instagram",
+    logo: <BsInstagram />,
+    link: "https://www.instagram.com/adityak7317/",
+  },
+
+  {
+    name: "Twitter",
+    logo: <BsTwitter />,
+    link: "https://twitter.com/adityak7317",
+  },
+];
 
 export default function Home() {
   const handleResumeDownload = () => {
@@ -27,7 +62,7 @@ export default function Home() {
         <div
           className="col-md-6"
           style={{
-            minHeight: "45vh",
+            // minHeight: "45vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -37,68 +72,31 @@ export default function Home() {
         >
           <div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <span>Hi There!</span>
+              <span>Hello !</span>
               <span>
                 I'm <span className="highlightText">Aditya Kumar 👋</span>
               </span>
             </div>
             <span className="d-flex align-items-center">
-              <span style={{ fontSize: "initial" }}>Software Engineer</span>
+              <span style={{ fontSize: "initial" }}>
+                Experienced engineer adept in designing, developing, and
+                maintaining intricate software. Proficient in Java, Python, C++,
+                with deep architecture understanding. Skilled in full-stack,
+                agile, collaborative problem-solving. Expertise in efficient,
+                scalable app creation. Effective communicator, team player
+                translating tech concepts for non-tech. Enthusiastic learner,
+                staying current in evolving software trends.
+              </span>
               <span className="blinkingText">&nbsp;&#x2758;</span>
             </span>
-            <div className="row">
-              <div className="col-md-8">
-                <div className="d-flex flex-col justify-content-between">
-                  <a href="mailto: who.adityak@gmail.com">
-                    <button
-                      type="button"
-                      className="btn btn-outline-dark btn-sm fs-5 pt-0 homeBTN"
-                    >
-                      <HiOutlineMail />
-                    </button>
-                  </a>
-
-                  <a href="https://github.com/adityak7317">
-                    <button
-                      type="button"
-                      className="btn btn-outline-dark btn-sm fs-5 pt-0 homeBTN"
-                    >
-                      <BsGithub />
-                    </button>
-                  </a>
-                  <a href="https://www.linkedin.com/in/adityak7317/">
-                    <button
-                      type="button"
-                      className="btn btn-outline-dark btn-sm fs-5 pt-0 homeBTN"
-                    >
-                      <BiLogoLinkedin />
-                    </button>
-                  </a>
-                  <a href="https://www.instagram.com/adityak7317/">
-                    <button
-                      type="button"
-                      className="btn btn-outline-dark btn-sm fs-5 pt-0 homeBTN"
-                    >
-                      <BsInstagram />
-                    </button>
-                  </a>
-                  <a href="https://twitter.com/adityak7317">
-                    <button
-                      type="button"
-                      className="btn btn-outline-dark btn-sm fs-5 pt-0 homeBTN"
-                    >
-                      <BsTwitter />
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
 
             <div className="row">
-              <div className="col-md-8">
+              <div className="col-md-9">
                 <button
                   type="button"
-                  className="btn btn-outline-dark homeBTN"
+                  className="btn btn-outline-dark homeBTN 
+                  "
+                  // BTNStyling
                   style={{ width: "100%" }}
                   onClick={handleResumeDownload}
                 >
@@ -112,7 +110,7 @@ export default function Home() {
         <div
           className="col-md-6"
           style={{
-            minHeight: "45vh",
+            // minHeight: "45vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -142,3 +140,20 @@ export default function Home() {
     </>
   );
 }
+
+//  {/* <div className="row">
+//               <div className="col-md-10">
+//                 <div className="d-flex flex-col justify-content-between">
+//                   {contactLinks.map((val, key) => (
+//                     <a href={val.link}>
+//                       <button
+//                         type="button"
+//                         className="btn btn-outline-dark btn-sm fs-5 pt-0 homeBTN"
+//                       >
+//                         {val.logo}
+//                       </button>
+//                     </a>
+//                   ))}
+//                 </div>
+//               </div>
+//             </div> */}
