@@ -27,7 +27,7 @@ const contactLinks = [
   {
     name: "Whatsapp",
     logo: <BsWhatsapp />,
-    link: "https://twitter.com/adityak7317",
+    link: "https://wa.me/917317420140",
   },
   {
     name: "Instagram",

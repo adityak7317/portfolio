@@ -17,9 +17,13 @@ import HomeNew from "./components/HomeNew/HomeNew";
 import SideLinks from "./components/SideLinks/SideLinks";
 
 export default function App() {
+  const [navbarChange, setNavbarChange] = useState(false);
+
+  // {window.screenY>500}
+
   const style = {
     components: {
-      minHeight: "85vh",
+      minHeight: "90vh",
       padding: "3%",
       backgroundColor: "#DDE6ED",
       width: "100%",
@@ -61,8 +65,10 @@ export default function App() {
     const handleScroll = (event) => {
       if (window.scrollY > 500) {
         setShow(true);
+        setNavbarChange(true);
       } else {
         setShow(false);
+        setNavbarChange(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -83,6 +89,7 @@ export default function App() {
         expRef={expRef}
         projectsRef={projectsRef}
         contactRef={contactRef}
+        navbarChange={navbarChange}
       />
 
       <div className="components">
@@ -134,29 +141,6 @@ export default function App() {
         <div className="bg-dark text-white" style={{ ...style.components }}>
           <Footer />
         </div>
-        {/* back to top */}
-        <div
-          style={{
-            position: "fixed",
-            right: 30,
-            bottom: 30,
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            scrollToTop(toTop);
-          }}
-        >
-          {show && (
-            <>
-              <button
-                type="button"
-                className="btn btn-warning btn-sm fs-5 pt-0"
-              >
-                <BsFillArrowUpCircleFill />
-              </button>
-            </>
-          )}
-        </div>
       </div>
 
       <div
@@ -169,6 +153,34 @@ export default function App() {
         // }}
       >
         <SideLinks />
+      </div>
+
+      {/* back to top */}
+      <div
+        style={{
+          position: "fixed",
+          right: 30,
+          bottom: 30,
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          scrollToTop(toTop);
+        }}
+      >
+        {show && (
+          <>
+            <button
+              type="button"
+              className="btn btn-warning btn-sm fs-5 pt-0"
+              style={{
+                backgroundColor: "rgb(222 129 0)",
+                borderColor: "rgb(222 129 0)",
+              }}
+            >
+              <BsFillArrowUpCircleFill />
+            </button>
+          </>
+        )}
       </div>
     </>
   );

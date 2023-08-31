@@ -9,6 +9,17 @@
   color: rgb(222 129 0);
 }
 
+.progressBG0 {
+  background-color: rgb(157, 178, 191);
+}
+
+/* .progressBG1 {
+  background-color: rgb(199, 199, 199);
+} */
+.progressBG2 {
+  background-color: rgb(222 129 0);
+}
+
 /* .homeBTN:hover {
   color: background-color;
 } */
@@ -118,6 +129,10 @@ li {
   box-sizing: border-box;
   box-shadow: 0px 0px 6px gray;
   border-radius: 18px;
+}
+
+.SpaceBWNavAndCom {
+  background-color: #9db2bf;
 }
 /* extra wide */
 @media only screen and (max-width: 2080px) {
