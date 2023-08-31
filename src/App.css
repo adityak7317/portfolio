@@ -3,39 +3,21 @@
   padding: 2.5%;
 } */
 
-/* extra wide */
-@media only screen and (max-width: 2080px) {
-  .SpaceBWNavAndCom {
-    padding: 2.3%;
-  }
-}
-/* desktop */
-@media only screen and (max-width: 1080px) {
-  .SpaceBWNavAndCom {
-    padding: 3%;
-  }
-}
-
-/* .SpaceBWNavAndCom {
-  padding: 6%;
-} */
-/* tab */
-@media only screen and (max-width: 720px) {
-  .SpaceBWNavAndCom {
-    padding: 6.5%;
-  }
-}
-/* smartphone */
-@media only screen and (max-width: 480px) {
-  .SpaceBWNavAndCom {
-    padding: 10.7%;
-  }
-}
-
 /* Home................... */
 
 .highlightText {
   color: rgb(222 129 0);
+}
+
+.progressBG0 {
+  background-color: rgb(157, 178, 191);
+}
+
+/* .progressBG1 {
+  background-color: rgb(199, 199, 199);
+} */
+.progressBG2 {
+  background-color: rgb(222 129 0);
 }
 
 /* .homeBTN:hover {
@@ -120,5 +102,77 @@ li {
 
   100% {
     opacity: 0;
+  }
+}
+.testing {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(222 129 0);
+  font-size: xxx-large;
+  font-weight: 900;
+}
+.testing2 {
+  -webkit-text-stroke: 3px rgb(0, 0, 0);
+  color: transparent;
+}
+
+.sideContactList {
+  position: fixed;
+  left: 0.5%;
+  top: 50%;
+  max-width: min-content;
+}
+.BTNStyling {
+  background-color: #b2bcc3;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 6px gray;
+  border-radius: 18px;
+}
+
+.SpaceBWNavAndCom {
+  background-color: #9db2bf;
+}
+/* extra wide */
+@media only screen and (max-width: 2080px) {
+  .SpaceBWNavAndCom {
+    padding: 2.3%;
+  }
+  .sideContactList {
+    top: 30%;
+  }
+}
+/* desktop */
+@media only screen and (max-width: 1080px) {
+  .SpaceBWNavAndCom {
+    padding: 3%;
+  }
+  .sideContactList {
+    top: 30%;
+  }
+}
+
+/* media query */
+
+/* .SpaceBWNavAndCom {
+  padding: 6%;
+} */
+/* tab */
+@media only screen and (max-width: 720px) {
+  .SpaceBWNavAndCom {
+    padding: 6.5%;
+  }
+  .sideContactList {
+    top: 36%;
+  }
+}
+/* smartphone */
+@media only screen and (max-width: 480px) {
+  .SpaceBWNavAndCom {
+    padding: 10.7%;
+  }
+  .sideContactList {
+    top: 36%;
   }
 }

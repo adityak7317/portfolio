@@ -13,10 +13,17 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import HomeNew from "./components/HomeNew/HomeNew";
+import SideLinks from "./components/SideLinks/SideLinks";
 
 export default function App() {
+  const [navbarChange, setNavbarChange] = useState(false);
+
+  // {window.screenY>500}
+
   const style = {
     components: {
+      minHeight: "90vh",
       padding: "3%",
       backgroundColor: "#DDE6ED",
       width: "100%",
@@ -58,8 +65,10 @@ export default function App() {
     const handleScroll = (event) => {
       if (window.scrollY > 500) {
         setShow(true);
+        setNavbarChange(true);
       } else {
         setShow(false);
+        setNavbarChange(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -80,6 +89,7 @@ export default function App() {
         expRef={expRef}
         projectsRef={projectsRef}
         contactRef={contactRef}
+        navbarChange={navbarChange}
       />
 
       <div className="components">
@@ -87,7 +97,7 @@ export default function App() {
         <div className="SpaceBWNavAndCom"></div>
         {/* </div> */}
         <div ref={homeRef}>
-          <div
+          {/* <div
             className="d-flex flex-column justify-content-center align-items-center"
             // style={{}}
           >
@@ -96,9 +106,11 @@ export default function App() {
               Everything is simple, but for this you need to master!!!
             </span>
             <span className="p-1"></span>
-          </div>
+          </div> */}
 
           <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
+            {/* <HomeNew /> */}
+
             <Home />
           </div>
         </div>
@@ -129,29 +141,46 @@ export default function App() {
         <div className="bg-dark text-white" style={{ ...style.components }}>
           <Footer />
         </div>
-        {/* back to top */}
-        <div
-          style={{
-            position: "fixed",
-            right: 30,
-            bottom: 30,
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            scrollToTop(toTop);
-          }}
-        >
-          {show && (
-            <>
-              <button
-                type="button"
-                className="btn btn-warning btn-sm fs-5 pt-0"
-              >
-                <BsFillArrowUpCircleFill />
-              </button>
-            </>
-          )}
-        </div>
+      </div>
+
+      <div
+        className="sideContactList BTNStyling"
+        // style={{
+        //   position: "absolute",
+        //   top: "30%",
+        //   left: "0%",
+        //   width: "min-content",
+        // }}
+      >
+        <SideLinks />
+      </div>
+
+      {/* back to top */}
+      <div
+        style={{
+          position: "fixed",
+          right: 30,
+          bottom: 30,
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          scrollToTop(toTop);
+        }}
+      >
+        {show && (
+          <>
+            <button
+              type="button"
+              className="btn btn-warning btn-sm fs-5 pt-0"
+              style={{
+                backgroundColor: "rgb(222 129 0)",
+                borderColor: "rgb(222 129 0)",
+              }}
+            >
+              <BsFillArrowUpCircleFill />
+            </button>
+          </>
+        )}
       </div>
     </>
   );
