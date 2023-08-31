@@ -108,7 +108,7 @@ li {
 }
 
 .sideContactList {
-  position: absolute;
+  position: fixed;
   left: 0.5%;
   top: 50%;
   max-width: min-content;

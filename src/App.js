@@ -19,7 +19,7 @@ import SideLinks from "./components/SideLinks/SideLinks";
 export default function App() {
   const style = {
     components: {
-      minHeight: "100vh",
+      minHeight: "85vh",
       padding: "3%",
       backgroundColor: "#DDE6ED",
       width: "100%",

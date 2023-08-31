@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
       <div className="row" style={{ margin: "auto" }}>
-        <div
+        {/* <div
           className="col-md-6"
           style={{
             // minHeight: "45vh",
@@ -105,6 +105,46 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div> */}
+
+        <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
+          {/* <div className="d-flex flex-column justify-content-center align-items-center"> */}
+          <div
+            // className="row"
+            style={{ fontSize: "xx-large", fontWeight: "bold" }}
+          >
+            <span>
+              Hi, I'm <span className="highlightText">Aditya Kumar</span> !
+            </span>
+            {/* <span>Hi !</span>
+            <span>
+              {"     "}I'm{" "}
+              <span className="highlightText">Aditya Kumar 👋</span>
+            </span> */}
+          </div>
+          <span className="text-center">
+            I'm a skilled fullstack developer with expertise in both front-end
+            and back-end technologies. I create user-friendly websites and
+            applications, focusing on functionality, performance, and modern
+            design.
+            <span className="blinkingText">&nbsp;&#124;</span>
+          </span>
+          {/* <div className="row"> */}
+          <div className="p-1"></div>
+          <div className="row">
+            <button
+              type="button"
+              className="btn btn-outline-dark homeBTN 
+            "
+              // BTNStyling
+              style={{ width: "100%" }}
+              onClick={handleResumeDownload}
+            >
+              Download Resume
+            </button>{" "}
+            {/* </div> */}
+          </div>
+          {/* </div> */}
         </div>
 
         <div
