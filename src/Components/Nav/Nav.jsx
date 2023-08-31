@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
-export default function Navbar(props) {
+export default function Nav(props) {
   const style = {
     navbarMenuBTN: {
       fontWeight: "bold",

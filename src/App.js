@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-import Navbar from "./components/Navbar/Navbar";
+import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
@@ -82,7 +82,7 @@ export default function App() {
     <>
       <ToastContainer />
 
-      <Navbar
+      <Nav
         scrollHandler={scrollHandler}
         homeRef={homeRef}
         aboutRef={aboutRef}
