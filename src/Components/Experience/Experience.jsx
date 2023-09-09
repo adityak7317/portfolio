@@ -1,158 +1,183 @@
-import React from "react";
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function Experience() {
+export default function ControlledAccordions() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
-    <>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>{" "}
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-        tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-        illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-        nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-        voluptas sequi, natus, doloremque tempora optio? Dolorum similique fugit
-        molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem hic
-        accusamus illo sint aut vitae sapiente officia consequatur est,
-        provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-        atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-        magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-      </div>
-    </>
+    <div>
+      <Accordion
+        expanded={expanded === "panel1"}
+        onChange={handleChange("panel1")}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
+        >
+          <Typography sx={{ width: "33%", flexShrink: 0 }}>
+            General settings
+          </Typography>
+          <Typography sx={{ color: "text.secondary" }}>
+            I am an accordion
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
+            Aliquam eget maximus est, id dignissim quam.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === "panel2"}
+        onChange={handleChange("panel2")}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2bh-content"
+          id="panel2bh-header"
+        >
+          <Typography sx={{ width: "33%", flexShrink: 0 }}>Users</Typography>
+          <Typography sx={{ color: "text.secondary" }}>
+            You are currently not an owner
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Donec placerat, lectus sed mattis semper, neque lectus feugiat
+            lectus, varius pulvinar diam eros in elit. Pellentesque convallis
+            laoreet laoreet.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === "panel3"}
+        onChange={handleChange("panel3")}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3bh-content"
+          id="panel3bh-header"
+        >
+          <Typography sx={{ width: "33%", flexShrink: 0 }}>
+            Advanced settings
+          </Typography>
+          <Typography sx={{ color: "text.secondary" }}>
+            Filtering has been entirely disabled for whole web server
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
+            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === "panel4"}
+        onChange={handleChange("panel4")}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel4bh-content"
+          id="panel4bh-header"
+        >
+          <Typography sx={{ width: "33%", flexShrink: 0 }}>
+            Personal data
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
+            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </div>
   );
 }
+
+// const experienceContent = [
+//   {
+//     companyName: "Ahana Systems and Solutions",
+//     companyLink: "https://ahanait.com/",
+//     position: "Software Engineer",
+//     duration: "Dec, 2021 - Present",
+//     location: "Bangalore, IN",
+//     logoImg: "https://ahanait.com/wp-content/uploads/2023/01/logo-new-1.svg",
+//     logoAlt: "Ahana Logo",
+//     description:
+//       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat vel reprehenderit ex id, adipisci nobis aperiam, voluptas quos nam distinctio voluptatem voluptatum consequatur facere ipsum sed molestias numquam dolorem nulla.",
+//     skills: [
+//       "ReactJS",
+//       "NodeJS",
+//       "ReactJS",
+//       "NodeJS",
+//       "ReactJS",
+//       "NodeJS",
+//       "ReactJS",
+//       "NodeJS",
+//     ],
+//   },
+// ];
+
+// <div>
+//         {experienceContent.map((val, i) => (
+//           <Accordion
+//             expanded={expanded === "panel1"}
+//             onChange={handleChange("panel1")}
+//           >
+//             <AccordionSummary
+//               aria-controls="panel1d-content"
+//               id="panel1d-header"
+//             >
+//               <Typography>
+//                 <div>
+//                   <span>{val.position}</span>
+//                   <span> @</span>
+//                   <span>{val.companyName}</span>
+//                 </div>
+
+//                 <div>
+//                   <span>{val.duration}</span>
+//                 </div>
+//               </Typography>
+//             </AccordionSummary>
+//             <AccordionDetails>
+//               <Typography>
+//                 <div className="row">
+//                   <div className="col-md-1">
+//                     {/* <img
+//                       src={val.logoImg}
+//                       alt={val.logoAlt}
+//                       // style={{ width: "max-content" }}
+//                     /> */}
+//                   </div>
+//                   <div className="col-md-11">
+//                     <div className="row">
+//                       <span>{val.location}</span>
+
+//                       <span>{val.description}</span>
+
+//                       <div className="col">
+//                         {val.skills.map((valSkills, j) => (
+//                           <span>{valSkills}</span>
+//                         ))}
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </Typography>
+//             </AccordionDetails>
+//           </Accordion>
+//         ))}
+//       </div>
