@@ -20,9 +20,6 @@
   background-color: rgb(222 129 0);
 }
 
-/* .homeBTN:hover {
-  color: background-color;
-} */
 li {
   list-style: none;
 }
@@ -123,13 +120,14 @@ li {
   left: 0.5%;
   top: 50%;
   max-width: min-content;
+  /* padding: ; */
 }
-.BTNStyling {
+/* .BTNStyling {
   background-color: #b2bcc3;
   box-sizing: border-box;
   box-shadow: 0px 0px 6px gray;
   border-radius: 18px;
-}
+} */
 
 .SpaceBWNavAndCom {
   background-color: #9db2bf;
