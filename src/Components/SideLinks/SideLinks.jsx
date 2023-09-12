@@ -45,12 +45,46 @@ const contactLinks = [
 export default function SideLinks() {
   return (
     <>
-      <div className="row">
+      {/* <div className="row">
         {contactLinks.map((val, key) => (
           <a href={val.link}>
             <button
               type="button"
               className="btn btn-outline-dark rounded-circle border-0 btn-sm fs-5 pt-0 homeBTN"
+            >
+              {val.logo}
+            </button>
+          </a>
+        ))}
+      </div> */}
+
+      <div
+        className="row "
+        style={{
+          borderRadius: "50px",
+          backgroundColor: "#b2bcc3",
+          boxSizing: "border-box",
+          boxShadow: "0px 0px 6px gray",
+          // display: "flex",
+          // flexDirection: "column",
+          // alignItems: "center",
+          // justifyContent: "center",
+          // width: "max-content",
+          // aspectRatio: "1",
+        }}
+      >
+        {contactLinks.map((val, key) => (
+          <a href={val.link} className="p-0 m-0">
+            <button
+              className="btn btn-outline-dark p-2 border-0 "
+              style={{
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "max-content",
+                aspectRatio: "1",
+              }}
             >
               {val.logo}
             </button>
