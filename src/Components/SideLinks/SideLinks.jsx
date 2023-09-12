@@ -74,19 +74,21 @@ export default function SideLinks() {
         }}
       >
         {contactLinks.map((val, key) => (
-          <button
-            className="btn btn-outline-dark p-2 border-0 "
-            style={{
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "max-content",
-              aspectRatio: "1",
-            }}
-          >
-            {val.logo}
-          </button>
+          <a href={val.link} className="p-0 m-0">
+            <button
+              className="btn btn-outline-dark p-2 border-0 "
+              style={{
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "max-content",
+                aspectRatio: "1",
+              }}
+            >
+              {val.logo}
+            </button>
+          </a>
         ))}
       </div>
     </>
