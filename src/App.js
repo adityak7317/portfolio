@@ -144,7 +144,7 @@ export default function App() {
       </div>
 
       <div
-        className="sideContactList BTNStyling"
+        className="sideContactList BTNStyling p-2"
         // style={{
         //   position: "absolute",
         //   top: "30%",
