@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -49,6 +49,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 const experienceContent = [
   {
+    slNo: "1",
     companyName: "Ahana Systems and Solutions",
     companyLink: "https://ahanait.com/",
     position: "Software Engineer",
@@ -58,44 +59,25 @@ const experienceContent = [
     logoImg: "https://ahanait.com/wp-content/uploads/2023/01/logo-new-1.svg",
     logoAlt: "Ahana Logo",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat vel reprehenderit ex id, adipisci nobis aperiam, voluptas quos nam distinctio voluptatem voluptatum consequatur facere ipsum sed molestias numquam dolorem nulla.",
+      "My work spans full-stack development, utilizing the multiple technologies to design and implement robust, scalable, and efficient web applications with a focus on MERN stack, Java-based backend and JavaScript-based frontend frameworks.",
     skills: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
       "ReactJS",
       "NodeJS",
-      "ReactJS",
-      "NodeJS",
-      "ReactJS",
-      "NodeJS",
-      "ReactJS",
-      "NodeJS",
-    ],
-  },
-  {
-    companyName: "Ahana Systems and Solutions",
-    companyLink: "https://ahanait.com/",
-    position: "Software Engineer",
-    start: "Dec, 2021",
-    end: "Present",
-    location: "Bangalore, IN",
-    logoImg: "https://ahanait.com/wp-content/uploads/2023/01/logo-new-1.svg",
-    logoAlt: "Ahana Logo",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat vel reprehenderit ex id, adipisci nobis aperiam, voluptas quos nam distinctio voluptatem voluptatum consequatur facere ipsum sed molestias numquam dolorem nulla.",
-    skills: [
-      "ReactJS",
-      "NodeJS",
-      "ReactJS",
-      "NodeJS",
-      "ReactJS",
-      "NodeJS",
-      "ReactJS",
-      "NodeJS",
+      "MySQL",
+      "MongoDB",
+      "Java",
+      "Python",
+      "DJango",
     ],
   },
 ];
 
-export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = React.useState("panel1");
+export default function Experience() {
+  const [expanded, setExpanded] = useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -105,7 +87,10 @@ export default function CustomizedAccordions() {
 
   return (
     <>
-      <h2 className="text-white">Professional Experience</h2>
+      {/* <h2 className="text-white">Professional Experience</h2> */}
+      <h2 className="p-0 m-0" style={{ color: "#a3c3db" }}>
+        Professional Experience
+      </h2>
       <div className="p-3"></div>
       <div>
         {experienceContent.map((expVal, i) => (
@@ -181,8 +166,9 @@ export default function CustomizedAccordions() {
                               label={skillVal}
                               variant="outlined"
                               onClick={handleClick}
+                              className="m-1"
                             />
-                            {"    "}
+                            {/* {"    "} */}
                           </span>
                         ))}
                       </span>
@@ -205,48 +191,3 @@ export default function CustomizedAccordions() {
     </>
   );
 }
-
-// const experienceContent = [
-//   {
-//     companyName: "Ahana Systems and Solutions",
-//     companyLink: "https://ahanait.com/",
-//     position: "Software Engineer",
-//     duration: "Dec, 2021 - Present",
-//     location: "Bangalore, IN",
-//     logoImg: "https://ahanait.com/wp-content/uploads/2023/01/logo-new-1.svg",
-//     logoAlt: "Ahana Logo",
-//     description:
-//       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat vel reprehenderit ex id, adipisci nobis aperiam, voluptas quos nam distinctio voluptatem voluptatum consequatur facere ipsum sed molestias numquam dolorem nulla.",
-//     skills: [
-//       "ReactJS",
-//       "NodeJS",
-//       "ReactJS",
-//       "NodeJS",
-//       "ReactJS",
-//       "NodeJS",
-//       "ReactJS",
-//       "NodeJS",
-//     ],
-//   },
-//   {
-//     companyName: "Ahana Systems and Solutions",
-//     companyLink: "https://ahanait.com/",
-//     position: "Software Engineer",
-//     duration: "Dec, 2021 - Present",
-//     location: "Bangalore, IN",
-//     logoImg: "https://ahanait.com/wp-content/uploads/2023/01/logo-new-1.svg",
-//     logoAlt: "Ahana Logo",
-//     description:
-//       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat vel reprehenderit ex id, adipisci nobis aperiam, voluptas quos nam distinctio voluptatem voluptatum consequatur facere ipsum sed molestias numquam dolorem nulla.",
-//     skills: [
-//       "ReactJS",
-//       "NodeJS",
-//       "ReactJS",
-//       "NodeJS",
-//       "ReactJS",
-//       "NodeJS",
-//       "ReactJS",
-//       "NodeJS",
-//     ],
-//   },
-// ];
