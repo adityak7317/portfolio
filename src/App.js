@@ -24,7 +24,7 @@ export default function App() {
   const style = {
     components: {
       minHeight: "90vh",
-      padding: "3%",
+      padding: "4%",
       backgroundColor: "#DDE6ED",
       width: "100%",
       display: "flex",
@@ -110,36 +110,55 @@ export default function App() {
 
           <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
             {/* <HomeNew /> */}
-
+            {/* <Fade top> */}
             <Home />
+            {/* </Fade> */}
           </div>
         </div>
         <div
-          style={{ ...style.components, backgroundColor: "#526D82" }}
+          // style={{ ...style.components, backgroundColor: "#526D82" }}
           ref={aboutRef}
         >
-          <About />
+          {/* <Fade bottom> */}
+          <div style={{ ...style.components, backgroundColor: "#526D82" }}>
+            <About />
+          </div>
+          {/* </Fade> */}
         </div>
         <div
-          style={{ ...style.components, backgroundColor: "#27374D" }}
+          // style={{ ...style.components, backgroundColor: "#27374D" }}
           ref={expRef}
         >
-          <Experience />
+          {/* <Fade bottom> */}
+          <div style={{ ...style.components, backgroundColor: "#27374D" }}>
+            <Experience />
+          </div>
+          {/* </Fade> */}
         </div>
         <div
-          style={{ ...style.components, backgroundColor: "#526D82" }}
+          // style={{ ...style.components, backgroundColor: "#526D82" }}
           ref={projectsRef}
         >
-          <Projects />
+          {/* <Fade bottom> */}
+          <div style={{ ...style.components, backgroundColor: "#526D82" }}>
+            <Projects />
+          </div>
+          {/* </Fade> */}
         </div>
         <div
-          style={{ ...style.components, backgroundColor: "#9DB2BF" }}
+          // style={{ ...style.components, backgroundColor: "#9DB2BF" }}
           ref={contactRef}
         >
-          <Contact />
+          {/* <Fade bottom> */}
+          <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
+            <Contact />
+          </div>
+          {/* </Fade> */}
         </div>
         <div className="bg-dark text-white" style={{ ...style.components }}>
+          {/* <Fade bottom> */}
           <Footer />
+          {/* </Fade> */}
         </div>
       </div>
 
@@ -152,7 +171,9 @@ export default function App() {
         //   width: "min-content",
         // }}
       >
+        {/* <Fade left> */}
         <SideLinks />
+        {/* </Fade> */}
       </div>
 
       {/* back to top */}

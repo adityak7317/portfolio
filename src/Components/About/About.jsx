@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-reveal";
 
 import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
@@ -103,7 +104,8 @@ const skillsProgress = [
 export default function About() {
   return (
     <>
-      {/* <div className="row">
+      <Fade bottom>
+        {/* <div className="row">
         {softSkills.map((val, key) => (
           <>
             <div className="col-md-3">
@@ -124,45 +126,45 @@ export default function About() {
         ))}
       </div> */}
 
-      <div className="row" style={{ margin: "auto" }}>
-        <div
-          className="col-md-6"
-          // style={{
-          //   minHeight: "45vh",
-          //   display: "flex",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          // }}
-        >
-          <div className="d-flex align-items-center justify-content-center">
-            <div className="row">
-              <span>
-                Greetings, I'm Aditya Kumar, a seasoned Full Stack Developer
-                with two years of hands-on experience. My journey in the realm
-                of software craft has been a dynamic exploration, driven by a
-                passion for creating innovative digital solutions.
-              </span>
-              <div className="p-1"></div>
-              <span>
-                Proficient in a spectrum of technologies, I specialize in
-                crafting seamless user experiences by skillfully blending the
-                power of ReactJS, HTML, CSS, and JavaScript. My backend prowess
-                encompasses Java, Python, Django, Node.js, and Express.js,
-                allowing me to construct robust foundations. I'm well-versed in
-                data management through MySQL and MongoDB, ensuring integrity
-                and accessibility.
-              </span>
+        <div className="row" style={{ margin: "auto" }}>
+          <div
+            className="col-md-6"
+            // style={{
+            //   minHeight: "45vh",
+            //   display: "flex",
+            //   justifyContent: "center",
+            //   alignItems: "center",
+            // }}
+          >
+            <div className="d-flex align-items-center justify-content-center">
+              <div className="row">
+                <span>
+                  Greetings, I'm Aditya Kumar, a seasoned Full Stack Developer
+                  with two years of hands-on experience. My journey in the realm
+                  of software craft has been a dynamic exploration, driven by a
+                  passion for creating innovative digital solutions.
+                </span>
+                <div className="p-1"></div>
+                <span>
+                  Proficient in a spectrum of technologies, I specialize in
+                  crafting seamless user experiences by skillfully blending the
+                  power of ReactJS, HTML, CSS, and JavaScript. My backend
+                  prowess encompasses Java, Python, Django, Node.js, and
+                  Express.js, allowing me to construct robust foundations. I'm
+                  well-versed in data management through MySQL and MongoDB,
+                  ensuring integrity and accessibility.
+                </span>
 
-              <div className="p-1"></div>
-              <span>
-                My portfolio is a testament to my commitment to functional
-                elegance. Each project reflects my dedication to innovation and
-                clean design. Join me in navigating the frontiers of technology,
-                where simplicity meets sophistication. Your interest is greatly
-                appreciated.
-              </span>
-              <div className="p-1"></div>
-              {/* <span>
+                <div className="p-1"></div>
+                <span>
+                  My portfolio is a testament to my commitment to functional
+                  elegance. Each project reflects my dedication to innovation
+                  and clean design. Join me in navigating the frontiers of
+                  technology, where simplicity meets sophistication. Your
+                  interest is greatly appreciated.
+                </span>
+                <div className="p-1"></div>
+                {/* <span>
                 As a developer, I am not just content with the status quo. I
                 venture into uncharted territories, embracing challenges and
                 transforming them into opportunities for growth. This relentless
@@ -177,59 +179,62 @@ export default function About() {
                 Thank you for joining me on this journey of creativity and
                 technical expertise.
               </span> */}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          className="col-md-6 p-2 d-flex flex-column justify-content-center"
-          // style={{
-          //   minHeight: "45vh",
-          //   display: "flex",
-          //   flexDirection: "column",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          // }}
-        >
-          {/* <div className="d-flex flex-column justify-content-between"> */}
-          {skillsProgress.map((val, key) => (
-            <>
-              <div className="progress progressBG0">
-                <div
-                  className="progress-bar bg-dark progressBG1"
-                  role="progressbar"
-                  style={{ width: progressHeader }}
-                  // aria-valuenow={15}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                >
-                  {val.name}
-                </div>
-                {/* {console.log(
+          <div
+            className="col-md-6 p-2 d-flex flex-column justify-content-center"
+            // style={{
+            //   minHeight: "45vh",
+            //   display: "flex",
+            //   flexDirection: "column",
+            //   justifyContent: "center",
+            //   alignItems: "center",
+            // }}
+          >
+            {/* <div className="d-flex flex-column justify-content-between"> */}
+            {skillsProgress.map((val, key) => (
+              <>
+                <div className="progress progressBG0">
+                  <div
+                    className="progress-bar bg-dark progressBG1"
+                    role="progressbar"
+                    style={{ width: progressHeader }}
+                    // aria-valuenow={15}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  >
+                    {val.name}
+                  </div>
+                  {/* {console.log(
                   "qwert",
 
                   parseInt(val.percentage) - parseInt(progressHeader) + "%"
                 )} */}
-                <div
-                  className="progress-bar progressBG2"
-                  role="progressbar"
-                  style={{
-                    width:
-                      parseInt(val.percentage) - parseInt(progressHeader) + "%",
-                  }}
-                  // aria-valuenow={20}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                >
-                  <div className="text-dark">{val.percentage}%</div>
+                  <div
+                    className="progress-bar progressBG2"
+                    role="progressbar"
+                    style={{
+                      width:
+                        parseInt(val.percentage) -
+                        parseInt(progressHeader) +
+                        "%",
+                    }}
+                    // aria-valuenow={20}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  >
+                    <div className="text-dark">{val.percentage}%</div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-2"></div>
-            </>
-          ))}
-          {/* </div> */}
+                <div className="p-2"></div>
+              </>
+            ))}
+            {/* </div> */}
+          </div>
         </div>
-      </div>
+      </Fade>
     </>
   );
 }
