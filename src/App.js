@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
+import SideLinks from "./components/SideLinks/SideLinks";
 import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -8,13 +9,13 @@ import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Bubbles from "./components/Bubbles/Bubbles";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import HomeNew from "./components/HomeNew/HomeNew";
-import SideLinks from "./components/SideLinks/SideLinks";
 
 export default function App() {
   const [navbarChange, setNavbarChange] = useState(false);
@@ -203,6 +204,9 @@ export default function App() {
           </>
         )}
       </div>
+
+      {/* bubbles */}
+      {/* <Bubbles /> */}
     </>
   );
 }
