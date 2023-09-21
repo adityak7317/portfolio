@@ -145,7 +145,7 @@ li {
 /* extra wide */
 @media only screen and (max-width: 2080px) {
   .SpaceBWNavAndCom {
-    padding: 2.3%;
+    padding: 1.5%;
   }
   .sideContactList {
     top: 30%;

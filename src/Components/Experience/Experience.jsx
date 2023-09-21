@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Fade } from "react-reveal";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -87,46 +88,47 @@ export default function Experience() {
 
   return (
     <>
-      {/* <h2 className="text-white">Professional Experience</h2> */}
-      <h2 className="p-0 m-0" style={{ color: "#a3c3db" }}>
-        Professional Experience
-      </h2>
-      <div className="p-3"></div>
-      <div>
-        {experienceContent.map((expVal, i) => (
-          <Accordion
-            expanded={expanded === `panel${i + 1}`}
-            onChange={handleChange(`panel${i + 1}`)}
-            className="mb-2"
-            style={{ borderRadius: "5px" }}
-            // style={{
-            //   background:
-            //     "linear-gradient(120deg, rgb(166 181 189) 32%, rgb(108 112 115) 100%)",
-            // }}
-          >
-            <AccordionSummary
-              aria-controls="panel1d-content"
-              id="panel1d-header"
+      <Fade bottom>
+        {/* <h2 className="text-white">Professional Experience</h2> */}
+        <h2 className="p-0 m-0" style={{ color: "#a3c3db" }}>
+          Professional Experience
+        </h2>
+        <div className="p-3"></div>
+        <div>
+          {experienceContent.map((expVal, i) => (
+            <Accordion
+              expanded={expanded === `panel${i + 1}`}
+              onChange={handleChange(`panel${i + 1}`)}
+              className="mb-2"
+              style={{ borderRadius: "5px" }}
+              // style={{
+              //   background:
+              //     "linear-gradient(120deg, rgb(166 181 189) 32%, rgb(108 112 115) 100%)",
+              // }}
             >
-              <Typography style={{ width: "100%" }}>
-                <div className="row">
-                  <div className="col-md-9">
-                    <span>
-                      {expVal.position} @ {expVal.companyName}
-                    </span>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="d-flex justify-content-end">
+              <AccordionSummary
+                aria-controls="panel1d-content"
+                id="panel1d-header"
+              >
+                <Typography style={{ width: "100%" }}>
+                  <div className="row">
+                    <div className="col-md-9">
                       <span>
-                        {expVal.start} - {expVal.end}
+                        {expVal.position} @ {expVal.companyName}
                       </span>
                     </div>
+                    <div className="col-md-3">
+                      <div className="d-flex justify-content-end">
+                        <span>
+                          {expVal.start} - {expVal.end}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {/* <Typography style={{ width: "100%" }}>
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                {/* <Typography style={{ width: "100%" }}>
               <div className="row">
                 <div className="col-md-1">
                   <img src={expVal.logoImg} alt={expVal.logoAlt} />
@@ -144,50 +146,51 @@ export default function Experience() {
                 </div>
               </div>
             </Typography> */}
-              <Typography style={{ width: "100%" }}>
-                <div className="row">
-                  <div className="col-md-1 d-flex">
-                    <img src={expVal.logoImg} alt={expVal.logoAlt} />
-                  </div>
-                  <div className="col-md-11">
-                    <div className="row">
-                      <span>
+                <Typography style={{ width: "100%" }}>
+                  <div className="row">
+                    <div className="col-md-1 d-flex">
+                      <img src={expVal.logoImg} alt={expVal.logoAlt} />
+                    </div>
+                    <div className="col-md-11">
+                      <div className="row">
                         <span>
-                          <MdLocationPin />
-                        </span>
-                        <span>{expVal.location}</span>
-                      </span>
-                      <span>{expVal.description}</span>
-                      {/* <Stack direction="row" spacing={1}> */}
-                      <span>
-                        {expVal.skills.map((skillVal, j) => (
                           <span>
-                            <Chip
-                              label={skillVal}
-                              variant="outlined"
-                              onClick={handleClick}
-                              className="m-1"
-                            />
-                            {/* {"    "} */}
+                            <MdLocationPin />
                           </span>
-                        ))}
-                      </span>
-                      {/* </Stack> */}
-                      {/* <span>
+                          <span>{expVal.location}</span>
+                        </span>
+                        <span>{expVal.description}</span>
+                        {/* <Stack direction="row" spacing={1}> */}
+                        <span>
+                          {expVal.skills.map((skillVal, j) => (
+                            <span>
+                              <Chip
+                                label={skillVal}
+                                variant="outlined"
+                                onClick={handleClick}
+                                className="m-1"
+                              />
+                              {/* {"    "} */}
+                            </span>
+                          ))}
+                        </span>
+                        {/* </Stack> */}
+                        {/* <span>
                         <span>{skillVal} , </span>
                     </span> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+                  {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
               quidem, facere tempore qui dolor repudiandae et veritatis
               quibusdam nostrum facilis beatae temporibus inventore ea
               architecto. Vel omnis deleniti architecto delectus? */}
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </div>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </div>
+      </Fade>
     </>
   );
 }

@@ -13,6 +13,8 @@ import { BsWhatsapp } from "react-icons/bs";
 import aditya_resume from "../../asset/aditya_resume.pdf";
 import { ToastContainer, toast } from "react-toastify";
 
+import "./Home.css";
+
 const contactLinks = [
   {
     name: "Mail",
@@ -113,8 +115,11 @@ export default function Home() {
             // className="row"
             style={{ fontSize: "xx-large", fontWeight: "bold" }}
           >
-            <span>
-              Hi, I'm <span className="highlightText">Aditya Kumar</span> !
+            <span className="typewriter">
+              <p>
+                {/* Hi, I'm <span className="highlightText">Aditya Kumar</span> ! */}
+                Hi, I'm Aditya Kumar !
+              </p>
             </span>
             {/* <span>Hi !</span>
             <span>
@@ -127,7 +132,7 @@ export default function Home() {
             and back-end technologies. I create user-friendly websites and
             applications, focusing on functionality, performance, and modern
             design.
-            <span className="blinkingText">&nbsp;&#124;</span>
+            {/* <span className="blinkingText">&nbsp;&#124;</span> */}
           </span>
           {/* <div className="row"> */}
           <div className="p-1"></div>
