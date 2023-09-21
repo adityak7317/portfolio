@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-import SideLinks from "./components/SideLinks/SideLinks";
-import Nav from "./components/Nav/Nav";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Experience from "./components/Experience/Experience";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import Bubbles from "./components/Bubbles/Bubbles";
+import SideLinks from "./Components/SideLinks/SideLinks";
+import Nav from "./Components/Nav/Nav";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Experience from "./Components/Experience/Experience";
+import Projects from "./Components/Projects/Projects";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
+import Bubbles from "./Components/Bubbles/Bubbles";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import HomeNew from "./components/HomeNew/HomeNew";
+import HomeNew from "./Components/HomeNew/HomeNew";
 
 export default function App() {
   const [navbarChange, setNavbarChange] = useState(false);
@@ -23,7 +23,7 @@ export default function App() {
   // {window.screenY>500}
 
   const style = {
-    components: {
+    componentStyle: {
       minHeight: "90vh",
       padding: "4%",
       backgroundColor: "#DDE6ED",
@@ -93,7 +93,7 @@ export default function App() {
         navbarChange={navbarChange}
       />
 
-      <div className="components">
+      <div className="Components">
         {/* <div> */}
         <div className="SpaceBWNavAndCom"></div>
         {/* </div> */}
@@ -109,7 +109,7 @@ export default function App() {
             <span className="p-1"></span>
           </div> */}
 
-          <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
+          <div style={{ ...style.componentStyle, backgroundColor: "#9DB2BF" }}>
             {/* <HomeNew /> */}
             {/* <Fade top> */}
             <Home />
@@ -117,46 +117,46 @@ export default function App() {
           </div>
         </div>
         <div
-          // style={{ ...style.components, backgroundColor: "#526D82" }}
+          // style={{ ...style.componentStyle, backgroundColor: "#526D82" }}
           ref={aboutRef}
         >
           {/* <Fade bottom> */}
-          <div style={{ ...style.components, backgroundColor: "#526D82" }}>
+          <div style={{ ...style.componentStyle, backgroundColor: "#526D82" }}>
             <About />
           </div>
           {/* </Fade> */}
         </div>
         <div
-          // style={{ ...style.components, backgroundColor: "#27374D" }}
+          // style={{ ...style.componentStyle, backgroundColor: "#27374D" }}
           ref={expRef}
         >
           {/* <Fade bottom> */}
-          <div style={{ ...style.components, backgroundColor: "#27374D" }}>
+          <div style={{ ...style.componentStyle, backgroundColor: "#27374D" }}>
             <Experience />
           </div>
           {/* </Fade> */}
         </div>
         <div
-          // style={{ ...style.components, backgroundColor: "#526D82" }}
+          // style={{ ...style.componentStyle, backgroundColor: "#526D82" }}
           ref={projectsRef}
         >
           {/* <Fade bottom> */}
-          <div style={{ ...style.components, backgroundColor: "#526D82" }}>
+          <div style={{ ...style.componentStyle, backgroundColor: "#526D82" }}>
             <Projects />
           </div>
           {/* </Fade> */}
         </div>
         <div
-          // style={{ ...style.components, backgroundColor: "#9DB2BF" }}
+          // style={{ ...style.componentStyle, backgroundColor: "#9DB2BF" }}
           ref={contactRef}
         >
           {/* <Fade bottom> */}
-          <div style={{ ...style.components, backgroundColor: "#9DB2BF" }}>
+          <div style={{ ...style.componentStyle, backgroundColor: "#9DB2BF" }}>
             <Contact />
           </div>
           {/* </Fade> */}
         </div>
-        <div className="bg-dark text-white" style={{ ...style.components }}>
+        <div className="bg-dark text-white" style={{ ...style.componentStyle }}>
           {/* <Fade bottom> */}
           <Footer />
           {/* </Fade> */}
