@@ -1,159 +1,134 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fade } from "react-reveal";
 
+import Button from "@mui/material/Button";
+
 export default function Contact() {
+  const [userData, setUserData] = useState({
+    userName: "",
+    userEmail: "",
+    userPhone: "",
+    userMessage: "",
+  });
+
+  const inputEventHandler = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
+  // console.log("chnage", userData);
+
+  function handleSubmit() {
+    // e.preventDefault();
+    // window.location.reload();
+    console.log("entered data...", userData);
+    // alert(userData);
+  }
+
   return (
     <>
       <Fade bottom>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
-        </div>{" "}
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, odit
-          tempore sed fuga, asperiores beatae optio sapiente voluptatum corporis
-          illo ex rem adipisci blanditiis ipsam consequuntur, sequi labore quam
-          nulla Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Asperiores praesentium soluta saepe deleniti ut, odit dicta maxime sit
-          voluptas sequi, natus, doloremque tempora optio? Dolorum similique
-          fugit molestiae cumque eaque. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Excepturi libero fuga maiores iusto porro dolorem
-          hic accusamus illo sint aut vitae sapiente officia consequatur est,
-          provident nostrum, sunt reprehenderit ducimus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quaerat, tempora. Voluptates, ab
-          atque! Corrupti, error sint nesciunt, cum, ratione necessitatibus vel
-          magnam minima iste ad aliquid omnis nostrum eveniet quasi!
+        <div className="row">
+          <div className="col-md-6">
+            <div className="d-flex align-items-center justify-content-center">
+              <span>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum,
+                minima! Enim maiores necessitatibus recusandae nisi magnam unde
+                reiciendis voluptate, dolores ipsa temporibus perferendis, vitae
+                ullam cumque error! Culpa, minima error?
+              </span>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <form>
+              <div className="p-5 row">
+                <div>
+                  <div className="mb-2">
+                    <label htmlFor="nameInput" className="form-label">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="nameInput"
+                      placeholder="xyz"
+                      required
+                      // defaultValue="demo"
+                      name="userName"
+                      onChange={(e) => {
+                        inputEventHandler(e);
+                      }}
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label htmlFor="mailInput" className="form-label">
+                      Mail ID
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="mailInput"
+                      placeholder="abc@example.com"
+                      required
+                      // defaultValue="demo"
+                      name="userEmail"
+                      onChange={(e) => {
+                        inputEventHandler(e);
+                      }}
+                    />
+                  </div>
+
+                  <div className="mb-2">
+                    <label htmlFor="numInput" className="form-label">
+                      Number
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="numInput"
+                      placeholder="0000000000"
+                      required
+                      // defaultValue="demo"
+                      name="userPhone"
+                      onChange={(e) => {
+                        inputEventHandler(e);
+                      }}
+                    />
+                  </div>
+
+                  <div className="mb-2">
+                    <label htmlFor="messageInput" className="form-label">
+                      Message
+                    </label>
+                    <textarea
+                      className="form-control"
+                      id="messageInput"
+                      rows={3}
+                      // defaultValue="demo"
+                      placeholder="Hi my name is xyz!"
+                      required
+                      name="userMessage"
+                      onChange={(e) => {
+                        inputEventHandler(e);
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="p-2"></div>
+                <div className="d-flex justify-content-end">
+                  <Button
+                    variant="contained"
+                    color="success"
+                    // type="submit"
+                    onClick={() => {
+                      handleSubmit();
+                    }}
+                  >
+                    Success
+                  </Button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </Fade>
     </>
