@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Fade } from "react-reveal";
-import SS from "../../static/SS.png";
+// import SS from "../../static/SS.png";
 import Card from "@mui/material/Card";
 // import CardContent from "@mui/material/CardContent";
 // import CardMedia from "@mui/material/CardMedia";
 // import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-import DR from "../../static/projects/DR.jpeg";
+import DR from "../../static/projects/DR.png";
 import ImgViewer from "./ImgViewer/ImgViewer";
 
 export default function Projects() {

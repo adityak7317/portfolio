@@ -14,13 +14,9 @@ export default function Contact() {
   const inputEventHandler = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
-  // console.log("chnage", userData);
 
   function handleSubmit() {
-    // e.preventDefault();
-    // window.location.reload();
     console.log("entered data...", userData);
-    // alert(userData);
   }
 
   return (
@@ -52,7 +48,6 @@ export default function Contact() {
                       id="nameInput"
                       placeholder="xyz"
                       required
-                      // defaultValue="demo"
                       name="userName"
                       onChange={(e) => {
                         inputEventHandler(e);
@@ -69,7 +64,6 @@ export default function Contact() {
                       id="mailInput"
                       placeholder="abc@example.com"
                       required
-                      // defaultValue="demo"
                       name="userEmail"
                       onChange={(e) => {
                         inputEventHandler(e);
@@ -87,7 +81,6 @@ export default function Contact() {
                       id="numInput"
                       placeholder="0000000000"
                       required
-                      // defaultValue="demo"
                       name="userPhone"
                       onChange={(e) => {
                         inputEventHandler(e);
@@ -103,7 +96,6 @@ export default function Contact() {
                       className="form-control"
                       id="messageInput"
                       rows={3}
-                      // defaultValue="demo"
                       placeholder="Hi my name is xyz!"
                       required
                       name="userMessage"
@@ -118,7 +110,6 @@ export default function Contact() {
                   <Button
                     variant="contained"
                     color="success"
-                    // type="submit"
                     onClick={() => {
                       handleSubmit();
                     }}

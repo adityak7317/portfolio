@@ -1,29 +1,12 @@
 import React from "react";
 import { Fade } from "react-reveal";
 
-import Button from "@mui/material/Button";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-
-import { FaBookReader } from "react-icons/fa";
-import { MdOutlinePublishedWithChanges } from "react-icons/md";
-import { TiGroup } from "react-icons/ti";
-import { BiSolidTimer } from "react-icons/bi";
-// import { BsTwitter } from "react-icons/bs";
-
-// <Stack direction="row" spacing={1}>
-//       <Chip label="Chip Filled" />
-//       <Chip label="Chip Outlined" variant="outlined" />
-//     </Stack>
-
 const style = {
   headerIcons: {
     padding: "0%",
     width: "150px",
     aspectRatio: "2/1",
     fontSize: "xx-large",
-    // color: "white",
-    // backgroundColor: "rgb(120 131 139)",
     borderRadius: "25px",
   },
 };
@@ -108,7 +91,7 @@ export default function About() {
         {/* <div className="row">
         {softSkills.map((val, key) => (
           <>
-            <div className="col-md-3">
+            <div className="col-md-3"></div>
               <div class="card mb-3">
                 <div class="p-1">
                   <div>
@@ -127,15 +110,7 @@ export default function About() {
       </div> */}
 
         <div className="row" style={{ margin: "auto" }}>
-          <div
-            className="col-md-6"
-            // style={{
-            //   minHeight: "45vh",
-            //   display: "flex",
-            //   justifyContent: "center",
-            //   alignItems: "center",
-            // }}
-          >
+          <div className="col-md-6">
             <div className="d-flex align-items-center justify-content-center">
               <div className="row">
                 <span>
@@ -164,36 +139,11 @@ export default function About() {
                   interest is greatly appreciated.
                 </span>
                 <div className="p-1"></div>
-                {/* <span>
-                As a developer, I am not just content with the status quo. I
-                venture into uncharted territories, embracing challenges and
-                transforming them into opportunities for growth. This relentless
-                pursuit of knowledge propels me to stay at the forefront of
-                industry trends, and I am an avid explorer of the vast landscape
-                of possibilities.
-              </span>
-              <div className="p-1"></div>
-              <span>
-                Welcome to my portfolio, a showcase of projects that reflect my
-                dedication to innovation, functionality, and elegant design.
-                Thank you for joining me on this journey of creativity and
-                technical expertise.
-              </span> */}
               </div>
             </div>
           </div>
 
-          <div
-            className="col-md-6 p-2 d-flex flex-column justify-content-center"
-            // style={{
-            //   minHeight: "45vh",
-            //   display: "flex",
-            //   flexDirection: "column",
-            //   justifyContent: "center",
-            //   alignItems: "center",
-            // }}
-          >
-            {/* <div className="d-flex flex-column justify-content-between"> */}
+          <div className="col-md-6 p-2 d-flex flex-column justify-content-center">
             {skillsProgress.map((val, key) => (
               <>
                 <div className="progress progressBG0">
@@ -201,17 +151,12 @@ export default function About() {
                     className="progress-bar bg-dark progressBG1"
                     role="progressbar"
                     style={{ width: progressHeader }}
-                    // aria-valuenow={15}
                     aria-valuemin={0}
                     aria-valuemax={100}
                   >
                     {val.name}
                   </div>
-                  {/* {console.log(
-                  "qwert",
 
-                  parseInt(val.percentage) - parseInt(progressHeader) + "%"
-                )} */}
                   <div
                     className="progress-bar progressBG2"
                     role="progressbar"
@@ -221,7 +166,6 @@ export default function About() {
                         parseInt(progressHeader) +
                         "%",
                     }}
-                    // aria-valuenow={20}
                     aria-valuemin={0}
                     aria-valuemax={100}
                   >
@@ -231,37 +175,9 @@ export default function About() {
                 <div className="p-2"></div>
               </>
             ))}
-            {/* </div> */}
           </div>
         </div>
       </Fade>
     </>
   );
 }
-
-// <div className="row">
-// <div className="col-md-3">
-//   <div className="card">
-//     <div className="card-body">
-//       <button
-//         type="button"
-//         className="btn btn-outline-dark d-flex justify-content-center align-items-center"
-//         style={style.headerIcons}
-//       >
-//         <FaBookReader />
-//       </button>
-//       <h6 className="d-flex justify-content-center m-0 p-0">
-//         Problem Solving
-//       </h6>
-//       <span>
-//         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-//         Temporibus illo sequi placeat excepturi quam porro in nesciunt
-//         nam animi impedit dolorum neque quibusdam libero reiciendis
-//         architecto, similique tempore necessitatibus officiis.
-//       </span>
-//     </div>
-//   </div>
-// </div>
-// </div>
-
-// <div className="p-1"></div>

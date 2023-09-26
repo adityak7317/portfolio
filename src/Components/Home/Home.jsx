@@ -61,80 +61,21 @@ export default function Home() {
   return (
     <>
       <div className="row" style={{ margin: "auto" }}>
-        {/* <div
-          className="col-md-6"
-          style={{
-            // minHeight: "45vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontSize: "xx-large",
-            fontWeight: "bold",
-          }}
-        >
-          <div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <span>Hello !</span>
-              <span>
-                I'm <span className="highlightText">Aditya Kumar 👋</span>
-              </span>
-            </div>
-            <span className="d-flex align-items-center">
-              <span style={{ fontSize: "initial" }}>
-                Experienced engineer adept in designing, developing, and
-                maintaining intricate software. Proficient in Java, Python, C++,
-                with deep architecture understanding. Skilled in full-stack,
-                agile, collaborative problem-solving. Expertise in efficient,
-                scalable app creation. Effective communicator, team player
-                translating tech concepts for non-tech. Enthusiastic learner,
-                staying current in evolving software trends.
-              </span>
-              <span className="blinkingText">&nbsp;&#x2758;</span>
-            </span>
-
-            <div className="row">
-              <div className="col-md-9">
-                <button
-                  type="button"
-                  className="btn btn-outline-dark homeBTN 
-                  "
-                  // BTNStyling
-                  style={{ width: "100%" }}
-                  onClick={handleResumeDownload}
-                >
-                  Download Resume
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
-          {/* <div className="d-flex flex-column justify-content-center align-items-center"> */}
           <div
             // className="row"
             style={{ fontSize: "xx-large", fontWeight: "bold" }}
           >
             <span className="typewriter">
-              <p>
-                {/* Hi, I'm <span className="highlightText">Aditya Kumar</span> ! */}
-                Hi, I'm Aditya Kumar !
-              </p>
+              <p>Hi, I'm Aditya Kumar !</p>
             </span>
-            {/* <span>Hi !</span>
-            <span>
-              {"     "}I'm{" "}
-              <span className="highlightText">Aditya Kumar 👋</span>
-            </span> */}
           </div>
           <span className="text-center">
             I'm a skilled fullstack developer with expertise in both front-end
             and back-end technologies. I create user-friendly websites and
             applications, focusing on functionality, performance, and modern
             design.
-            {/* <span className="blinkingText">&nbsp;&#124;</span> */}
           </span>
-          {/* <div className="row"> */}
           <div className="p-1"></div>
           <div className="row">
             <button
@@ -146,10 +87,8 @@ export default function Home() {
               onClick={handleResumeDownload}
             >
               Download Resume
-            </button>{" "}
-            {/* </div> */}
+            </button>
           </div>
-          {/* </div> */}
         </div>
 
         <div
