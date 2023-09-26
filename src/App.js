@@ -2,25 +2,20 @@ import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
 import SideLinks from "./components/SideLinks/SideLinks";
-import Nav from "./components/Nav/Nav";
+import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Bubbles from "./components/Bubbles/Bubbles";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import HomeNew from "./components/HomeNew/HomeNew";
 
 export default function App() {
   const [navbarChange, setNavbarChange] = useState(false);
-
-  // {window.screenY>500}
 
   const style = {
     componentStyle: {
@@ -35,17 +30,10 @@ export default function App() {
     },
   };
 
-  // const [homeHover, setHomeHover] = useState(false);
-  // const [aboutHover, setAboutHover] = useState(false);
-  // const [expHover, setExpHover] = useState(false);
-  // const [skilsHover, setSkilsHover] = useState(false);
-  // const [projectsHover, setProjectsHover] = useState(false);
-  // const [contactHover, setContactHover] = useState(false);
-
   const homeRef = useRef();
   const aboutRef = useRef();
   const expRef = useRef();
-  const skillsRef = useRef();
+  // const skillsRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
   const toTop = useRef();
@@ -83,7 +71,7 @@ export default function App() {
     <>
       <ToastContainer />
 
-      <Nav
+      <Header
         scrollHandler={scrollHandler}
         homeRef={homeRef}
         aboutRef={aboutRef}
@@ -94,72 +82,46 @@ export default function App() {
       />
 
       <div className="Components">
-        {/* <div> */}
         <div className="SpaceBWNavAndCom"></div>
-        {/* </div> */}
         <div ref={homeRef}>
-          {/* <div
-            className="d-flex flex-column justify-content-center align-items-center"
-            // style={{}}
-          >
-            <span className="p-1"></span>
-            <span>
-              Everything is simple, but for this you need to master!!!
-            </span>
-            <span className="p-1"></span>
-          </div> */}
-
           <div style={{ ...style.componentStyle, backgroundColor: "#9DB2BF" }}>
-            {/* <HomeNew /> */}
-            {/* <Fade top> */}
             <Home />
-            {/* </Fade> */}
           </div>
         </div>
         <div
           // style={{ ...style.componentStyle, backgroundColor: "#526D82" }}
           ref={aboutRef}
         >
-          {/* <Fade bottom> */}
           <div style={{ ...style.componentStyle, backgroundColor: "#526D82" }}>
             <About />
           </div>
-          {/* </Fade> */}
         </div>
         <div
           // style={{ ...style.componentStyle, backgroundColor: "#27374D" }}
           ref={expRef}
         >
-          {/* <Fade bottom> */}
           <div style={{ ...style.componentStyle, backgroundColor: "#27374D" }}>
             <Experience />
           </div>
-          {/* </Fade> */}
         </div>
         <div
           // style={{ ...style.componentStyle, backgroundColor: "#526D82" }}
           ref={projectsRef}
         >
-          {/* <Fade bottom> */}
           <div style={{ ...style.componentStyle, backgroundColor: "#526D82" }}>
             <Projects />
           </div>
-          {/* </Fade> */}
         </div>
         <div
           // style={{ ...style.componentStyle, backgroundColor: "#9DB2BF" }}
           ref={contactRef}
         >
-          {/* <Fade bottom> */}
           <div style={{ ...style.componentStyle, backgroundColor: "#9DB2BF" }}>
             <Contact />
           </div>
-          {/* </Fade> */}
         </div>
         <div className="bg-dark text-white" style={{ ...style.componentStyle }}>
-          {/* <Fade bottom> */}
           <Footer />
-          {/* </Fade> */}
         </div>
       </div>
 
@@ -172,9 +134,7 @@ export default function App() {
         //   width: "min-content",
         // }}
       >
-        {/* <Fade left> */}
         <SideLinks />
-        {/* </Fade> */}
       </div>
 
       {/* back to top */}
@@ -204,9 +164,6 @@ export default function App() {
           </>
         )}
       </div>
-
-      {/* bubbles */}
-      {/* <Bubbles /> */}
     </>
   );
 }

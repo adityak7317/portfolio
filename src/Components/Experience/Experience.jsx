@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Fade } from "react-reveal";
 import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
@@ -11,6 +10,7 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 
 import { MdLocationPin } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -26,7 +26,7 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<IoIosArrowForward sx={{ fontSize: "0.9rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -89,7 +89,6 @@ export default function Experience() {
   return (
     <>
       <Fade bottom>
-        {/* <h2 className="text-white">Professional Experience</h2> */}
         <h2 className="p-0 m-0" style={{ color: "#a3c3db" }}>
           Professional Experience
         </h2>
@@ -101,10 +100,6 @@ export default function Experience() {
               onChange={handleChange(`panel${i + 1}`)}
               className="mb-2"
               style={{ borderRadius: "5px" }}
-              // style={{
-              //   background:
-              //     "linear-gradient(120deg, rgb(166 181 189) 32%, rgb(108 112 115) 100%)",
-              // }}
             >
               <AccordionSummary
                 aria-controls="panel1d-content"
@@ -128,24 +123,6 @@ export default function Experience() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                {/* <Typography style={{ width: "100%" }}>
-              <div className="row">
-                <div className="col-md-1">
-                  <img src={expVal.logoImg} alt={expVal.logoAlt} />
-                </div>
-                <div className="col-md-11">
-                  <div className="row">
-                    <span>{expVal.location}</span>
-                    <span>{expVal.description}</span>
-                    <span>
-                      {expVal.skills.map((skillVal, j) => (
-                        <span>{skillVal}</span>
-                      ))}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Typography> */}
                 <Typography style={{ width: "100%" }}>
                   <div className="row">
                     <div className="col-md-1 d-flex">
@@ -160,7 +137,6 @@ export default function Experience() {
                           <span>{expVal.location}</span>
                         </span>
                         <span>{expVal.description}</span>
-                        {/* <Stack direction="row" spacing={1}> */}
                         <span>
                           {expVal.skills.map((skillVal, j) => (
                             <span>
@@ -170,21 +146,12 @@ export default function Experience() {
                                 onClick={handleClick}
                                 className="m-1"
                               />
-                              {/* {"    "} */}
                             </span>
                           ))}
                         </span>
-                        {/* </Stack> */}
-                        {/* <span>
-                        <span>{skillVal} , </span>
-                    </span> */}
                       </div>
                     </div>
                   </div>
-                  {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-              quidem, facere tempore qui dolor repudiandae et veritatis
-              quibusdam nostrum facilis beatae temporibus inventore ea
-              architecto. Vel omnis deleniti architecto delectus? */}
                 </Typography>
               </AccordionDetails>
             </Accordion>
