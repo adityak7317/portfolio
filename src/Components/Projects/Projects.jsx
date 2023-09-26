@@ -7,9 +7,32 @@ import Card from "@mui/material/Card";
 // import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
+import DR from "../../static/projects/DR.jpeg";
+import ImgViewer from "./ImgViewer/ImgViewer";
+
 export default function Projects() {
+  const [imgViewerOpen, setImgViewerOpen] = useState(false);
+
+  const ProjectsData = [
+    {
+      image: DR,
+      name: " Digital Register",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus eveniet soluta natus autem ea, veniam consequuntur modi corrupti! Earum veniam quia ipsam, quaerat reprehenderit animi ipsum consequatur vero optio.",
+    },
+    {
+      image: DR,
+      name: " Digital Register",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus eveniet soluta natus autem ea, veniam consequuntur modi corrupti! Earum veniam quia ipsam, quaerat reprehenderit animi ipsum consequatur vero optio.",
+    },
+  ];
+
   return (
     <>
+      <ImgViewer
+        setImgViewerOpen={setImgViewerOpen}
+        imgViewerOpen={imgViewerOpen}
+        DR={DR}
+      />
       <Fade bottom>
         <h2 className="p-0 m-0" style={{ color: "rgb(29 48 73)" }}>
           Projects
@@ -17,32 +40,35 @@ export default function Projects() {
 
         <div className="p-3"></div>
 
-        <Card className="projectCard">
-          <CardActionArea>
-            <div className="bg-light rounded-3 overflow-hidden">
-              <div className="row">
-                <div className="col-md-5">
-                  <img
-                    src={SS}
-                    alt="photoooo...."
-                    // className="position-relative"
-                    style={{ width: "100%" }}
-                  />
+        {ProjectsData.map((val, key) => (
+          <Card
+            className="projectCard mb-3"
+            onClick={() => {
+              setImgViewerOpen(true);
+            }}
+          >
+            <div>
+              <CardActionArea>
+                <div className="bg-light rounded-3 overflow-hidden">
+                  <div className="row">
+                    <div className="col-md-5">
+                      <img
+                        src={val.image}
+                        alt="photoooo...."
+                        // className="position-relative"
+                        style={{ width: "100%" }}
+                      />
+                    </div>
+                    <div className="col-md-7">
+                      <h5 className="mt-3">{val.name}</h5>
+                      <span>{val.desc}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="col-md-7">
-                  <h5 className="mt-3">Heading</h5>
-                  <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Possimus consequatur magni similique quam accusantium
-                    pariatur reprehenderit sapiente, vitae unde nobis quae
-                    adipisci quibusdam voluptatibus magnam error expedita, vero
-                    alias quidem.
-                  </span>
-                </div>
-              </div>
+              </CardActionArea>
             </div>
-          </CardActionArea>
-        </Card>
+          </Card>
+        ))}
       </Fade>
     </>
   );
