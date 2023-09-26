@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-import SideLinks from "./Components/SideLinks/SideLinks";
-import Nav from "./Components/Nav/Nav";
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
-import Experience from "./Components/Experience/Experience";
-import Projects from "./Components/Projects/Projects";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
-import Bubbles from "./Components/Bubbles/Bubbles";
+import SideLinks from "./components/SideLinks/SideLinks";
+import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import Bubbles from "./components/Bubbles/Bubbles";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import HomeNew from "./Components/HomeNew/HomeNew";
+import HomeNew from "./components/HomeNew/HomeNew";
 
 export default function App() {
   const [navbarChange, setNavbarChange] = useState(false);
