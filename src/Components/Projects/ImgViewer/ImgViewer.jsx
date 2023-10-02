@@ -54,7 +54,11 @@ export default function ImgViewer(props) {
               </Button>
             </div> */}
             <div className="d-flex justify-content-center align-items-center">
-              <img src={props.DR} alt="photo" style={{ width: "180%" }} />
+              <img
+                src={props.selectedImage.image}
+                alt={props.selectedImage.imageAlt}
+                style={{ width: "180%" }}
+              />
             </div>
           </Box>
         </Fade>
