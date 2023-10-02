@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { Fade } from "react-reveal";
 
 export default function App() {
   const [navbarChange, setNavbarChange] = useState(false);
@@ -134,7 +135,9 @@ export default function App() {
         //   width: "min-content",
         // }}
       >
-        <SideLinks />
+        <Fade left>
+          <SideLinks />
+        </Fade>
       </div>
 
       {/* back to top */}
