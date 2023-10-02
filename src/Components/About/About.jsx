@@ -68,11 +68,11 @@ const skillsProgress = [
   },
   {
     name: "ReactJS",
-    percentage: "70",
+    percentage: "85",
   },
   {
     name: "NodeJS",
-    percentage: "50",
+    percentage: "80",
   },
   {
     name: "MySql",

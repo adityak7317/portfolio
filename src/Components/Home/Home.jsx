@@ -13,6 +13,8 @@ import { BsWhatsapp } from "react-icons/bs";
 import aditya_resume from "../../asset/aditya_resume.pdf";
 import { ToastContainer, toast } from "react-toastify";
 
+import { Fade } from "react-reveal";
+
 import "./Home.css";
 
 const contactLinks = [
@@ -62,33 +64,40 @@ export default function Home() {
     <>
       <div className="row" style={{ margin: "auto" }}>
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
-          <div
-            // className="row"
-            style={{ fontSize: "xx-large", fontWeight: "bold" }}
-          >
-            <span className="typewriter">
-              <p>Hi, I'm Aditya Kumar !</p>
-            </span>
-          </div>
-          <span className="text-center">
-            I'm a skilled fullstack developer with expertise in both front-end
-            and back-end technologies. I create user-friendly websites and
-            applications, focusing on functionality, performance, and modern
-            design.
-          </span>
-          <div className="p-1"></div>
-          <div className="row">
-            <button
-              type="button"
-              className="btn btn-outline-dark homeBTN 
-            "
-              // BTNStyling
-              style={{ width: "100%" }}
-              onClick={handleResumeDownload}
+          <Fade left>
+            <div
+              // className="row"
+              style={{ fontSize: "xx-large", fontWeight: "bold" }}
             >
-              Download Resume
-            </button>
-          </div>
+              <span className="typewriter">
+                <p>Hi, I'm Aditya Kumar !</p>
+              </span>
+            </div>
+          </Fade>
+          <Fade right>
+            <span className="text-center">
+              I'm a skilled fullstack developer with expertise in both front-end
+              and back-end technologies. I create user-friendly websites and
+              applications, focusing on functionality, performance, and modern
+              design.
+            </span>
+          </Fade>
+
+          <div className="p-1"></div>
+          <Fade top>
+            <div className="row">
+              <button
+                type="button"
+                className="btn btn-outline-dark homeBTN 
+            "
+                // BTNStyling
+                style={{ width: "100%" }}
+                onClick={handleResumeDownload}
+              >
+                Download Resume
+              </button>
+            </div>
+          </Fade>
         </div>
 
         <div
@@ -108,16 +117,18 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <img
-              src={mainPhoto}
-              alt="main photo"
-              className="mainPhoto"
-              style={{
-                width: "90%",
-                // minHeight: "fit-content",
-                // filter: "drop-shadow(16px 16px 10px black)",
-              }}
-            />
+            <Fade>
+              <img
+                src={mainPhoto}
+                alt="main photo"
+                className="mainPhoto"
+                style={{
+                  width: "90%",
+                  // minHeight: "fit-content",
+                  // filter: "drop-shadow(16px 16px 10px black)",
+                }}
+              />
+            </Fade>
           </div>
         </div>
       </div>
