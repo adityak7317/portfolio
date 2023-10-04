@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 
 import Button from "@mui/material/Button";
 import Left from "./Left/Left";
-import Right from "./Left/Right/Right";
+import Right from "./Right/Right";
 
 export default function Contact() {
   return (
